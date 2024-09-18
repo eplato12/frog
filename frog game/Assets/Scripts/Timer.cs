@@ -6,17 +6,38 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
 
-    public float timeLeft = 3.0f;
-    public Text startText;  
+    public float timeLeft;
+    public Text timerText;
+    public bool timerOn;
 
+    void Start()
+    {
+        timerOn = true;
+    }
 
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-        startText.text = (timeLeft).ToString("0");
-        if (timeLeft < 0)
+        if (timerOn)
         {
-            SceneManager.GetActiveScene();
+            if (timeLeft > 0)
+            {
+               timeLeft -= Time.deltaTime;
+               updateTimer(timeLeft);
+            }
         }
+        else
+        {
+            timeLeft = 0;
+            timerOn = false;
+        }
+    
+    }
+
+    void updateTimer(float currentTime)
+    {
+        currentTime += 1;
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
 }
