@@ -12,11 +12,6 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (timerText == null)
-        {
-            Debug.LogError("Timer Text is not assigned!");
-            return;
-        }
 
         // Your existing code
         if (timeLeft > 0)
