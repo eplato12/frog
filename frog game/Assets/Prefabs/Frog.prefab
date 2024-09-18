@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
+  m_Sprite: {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frogSprites:
-  - {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
+  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
   - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
   - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
   - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
   - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
   - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
-  - {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
+  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
   speed: 2
   frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
 --- !u!82 &-4929996090955134628

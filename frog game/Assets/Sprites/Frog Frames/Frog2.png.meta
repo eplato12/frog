@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 806
-        y: 296
+        y: 283
         width: 487
         height: 911
       alignment: 0
@@ -151,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 945
-        y: 1203
+        y: 1190
         width: 8
         height: 8
       alignment: 0
@@ -173,7 +173,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1146
-        y: 1203
+        y: 1190
         width: 8
         height: 8
       alignment: 0
@@ -195,7 +195,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 965
-        y: 289
+        y: 276
         width: 8
         height: 8
       alignment: 0
@@ -217,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1115
-        y: 289
+        y: 276
         width: 8
         height: 8
       alignment: 0
@@ -247,12 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frog2_0: 8688989734150688896
-      Frog2_1: -6094846967062129376
-      Frog2_2: -4358824351495043357
-      Frog2_3: 4259690331567961662
-      Frog2_4: 5295782742283162936
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
