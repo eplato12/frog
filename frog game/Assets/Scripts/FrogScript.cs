@@ -6,12 +6,16 @@ public class FrogScript : MonoBehaviour
 
     public Sprite[] frogSprites;
     public float speed;
+    public AudioClip frogJump;
+
+    private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         frogSprite = GetComponent<SpriteRenderer>();
+        frogAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,6 +23,7 @@ public class FrogScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            PlayAudio(frogJump);
             transform.position += transform.up * speed * Time.deltaTime;
             StartCoroutine(AnimateFrog());
         }
@@ -32,4 +37,10 @@ public class FrogScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+    private void PlayAudio(AudioClip clip)
+    {
+        frogAudio.PlayOneShot(clip);
+    }
+
 }
