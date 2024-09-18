@@ -24,7 +24,7 @@ public class FrogScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayAudio(frogJump);
-            transform.position += transform.up * speed * Time.deltaTime;
+            transform.position += transform.up * speed * 10 * Time.deltaTime;
             StartCoroutine(AnimateFrog());
         }
     }
