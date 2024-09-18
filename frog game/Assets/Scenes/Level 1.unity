@@ -265,11 +265,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 620360053519073682, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1261008
+      value: -7.04
       objectReference: {fileID: 0}
     - target: {fileID: 620360053519073682, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.80985737
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 620360053519073682, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -404,17 +404,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345426293891626459, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0099999625
+      objectReference: {fileID: 0}
+    - target: {fileID: 345426293891626459, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.020000009
+      objectReference: {fileID: 0}
     - target: {fileID: 1097886776378277806, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.576101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1097886776378277806, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8701426
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1097886776378277806, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.021350347
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1097886776378277806, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
       propertyPath: m_LocalRotation.w
@@ -444,9 +452,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3398946927948457378, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398946927948457378, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873762064845907384, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0099999625
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873762064845907384, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.020000009
+      objectReference: {fileID: 0}
     - target: {fileID: 7010796395074793463, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
       propertyPath: m_Name
       value: 'water rings '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195652390644840955, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.048499912
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195652390644840955, guid: b96369270dddb4268a5efbdf5d2c2c54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.058400005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
