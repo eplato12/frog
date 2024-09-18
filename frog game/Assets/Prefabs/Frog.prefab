@@ -129,9 +129,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frogSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
+  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
+  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
+  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
+  - {fileID: -3744932180068557138, guid: 67d3713552f854d0c8bdef3bc02d3628, type: 3}
+  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
+  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
+  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
+  - {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
   speed: 5
+  frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
