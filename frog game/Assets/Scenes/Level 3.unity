@@ -262,6 +262,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog
       objectReference: {fileID: 0}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: frogSprites.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: -3744932180068557138, guid: 67d3713552f854d0c8bdef3bc02d3628, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[6]'
+      value: 
+      objectReference: {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: 'frogSprites.Array.data[8]'
+      value: 
+      objectReference: {fileID: -7551377331138133886, guid: 3865c798b54524a379ee3cbb2dd2247b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
