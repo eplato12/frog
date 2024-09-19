@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FrogScript : MonoBehaviour
 {
-
     public Sprite[] frogSprites;
     public float speed;
     public AudioClip frogJump;
@@ -12,21 +11,22 @@ public class FrogScript : MonoBehaviour
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayAudio(frogJump);
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce); 
             StartCoroutine(AnimateFrog());
         }
     }
@@ -45,6 +45,6 @@ public class FrogScript : MonoBehaviour
         frogAudio.PlayOneShot(clip);
     }
 
-
-
+ 
+  
 }
