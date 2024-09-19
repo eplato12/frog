@@ -463,8 +463,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4244325}
   - {fileID: 1961309188}
+  - {fileID: 4244325}
   m_Father: {fileID: 552738562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -647,8 +647,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fe3729c1e4e1f4dc2a9b22a595352221, type: 2}
-  m_sharedMaterial: {fileID: -8066531665918533909, guid: fe3729c1e4e1f4dc2a9b22a595352221, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
+  m_sharedMaterial: {fileID: -7498497617447309216, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 1961309190}
   - component: {fileID: 1961309189}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,8 +870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Only Go Frogward '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fe3729c1e4e1f4dc2a9b22a595352221, type: 2}
-  m_sharedMaterial: {fileID: -8066531665918533909, guid: fe3729c1e4e1f4dc2a9b22a595352221, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
+  m_sharedMaterial: {fileID: -7498497617447309216, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
