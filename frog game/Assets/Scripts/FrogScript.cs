@@ -7,7 +7,8 @@ public class FrogScript : MonoBehaviour
     public Sprite[] frogSprites;
     public float speed;
     public AudioClip frogJump;
-
+    private Rigidbody2D rb;
+    private float jumpForce = 2f;
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
 
@@ -16,6 +17,7 @@ public class FrogScript : MonoBehaviour
     {
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class FrogScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PlayAudio(frogJump);
-            transform.position += transform.up * speed * 50 * Time.deltaTime;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(AnimateFrog());
         }
     }
@@ -42,5 +44,7 @@ public class FrogScript : MonoBehaviour
     {
         frogAudio.PlayOneShot(clip);
     }
+
+
 
 }
