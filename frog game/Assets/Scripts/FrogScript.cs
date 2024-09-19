@@ -4,10 +4,8 @@ using System.Collections;
 public class FrogScript : MonoBehaviour
 {
     public Sprite[] frogSprites;
-    public float speed;
     public AudioClip frogJump;
     private Rigidbody2D rb;
-    private float jumpForce = 2f;
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
 
@@ -23,20 +21,10 @@ public class FrogScript : MonoBehaviour
 
     void Update()
     {
+        Vector2 vel = rb.linearVelocity;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PlayAudio(frogJump);
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce); 
-            StartCoroutine(AnimateFrog());
-        }
-    }
-
-    private IEnumerator AnimateFrog()
-    {
-        for (int i = 0; i < frogSprites.Length; i++)
-        {
-            frogSprite.sprite = frogSprites[i];
-            yield return new WaitForSeconds(0.1f);
+            transform.position += Vector3.up * 1f;
         }
     }
 
@@ -45,6 +33,4 @@ public class FrogScript : MonoBehaviour
         frogAudio.PlayOneShot(clip);
     }
 
- 
-  
 }
