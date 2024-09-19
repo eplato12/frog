@@ -5,26 +5,45 @@ public class FrogScript : MonoBehaviour
 {
     public Sprite[] frogSprites;
     public AudioClip frogJump;
-    private Rigidbody2D rb;
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
 
+    public float jumpDistance = 1f; 
 
     void Start()
     {
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody2D>();
-
     }
-
 
     void Update()
     {
-        Vector2 vel = rb.linearVelocity;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.position += Vector3.up * 1f;
+            Jump();
+        }
+
+        
+        RotateFrog();
+    }
+
+    void Jump()
+    {
+        
+        Vector3 jumpDirection = transform.up; 
+        transform.position += transform.up * jumpDistance; 
+        PlayAudio(frogJump); 
+    }
+
+    void RotateFrog()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(0, 0, 90 * Time.deltaTime); 
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(0, 0, -90 * Time.deltaTime); 
         }
     }
 
@@ -32,5 +51,6 @@ public class FrogScript : MonoBehaviour
     {
         frogAudio.PlayOneShot(clip);
     }
-
 }
+
+
