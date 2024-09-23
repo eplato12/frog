@@ -23,24 +23,18 @@ public class FrogScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+            if (!IsLily(transform.position))
+            {
+                //FrogDie();
+                frogSprite.enabled = false;
+            }
         }
         RotateFrog();
     }
 
     void Jump()
     {
-
-        //Vector3 jumpDirection = transform.up;
-        //rb.AddForce(transform.up * 50f);
-        //rb.linearVelocity = Vector2.zero;
-        //transform.position += Vector3.forward;
-        //transform.position += transform.up * jumpDistance;
-
-        //Vector2 newPosition = rb.position + (Vector2)(transform.up * jumpDistance);
-        Vector2 newPosition = rb.position + (Vector2) transform.up;
-
-
-        rb.MovePosition(newPosition);
+        transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
         StartCoroutine(Animate());
     }
@@ -69,6 +63,19 @@ public class FrogScript : MonoBehaviour
             frogSprite.sprite = frogSprites[i];
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    protected bool IsLily(Vector2 gridPosition)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("lily"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
