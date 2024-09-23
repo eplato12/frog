@@ -51,4 +51,9 @@ public class AdvanceScene : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+
+    public void toLevel(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }
