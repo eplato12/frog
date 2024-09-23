@@ -30,10 +30,12 @@ public class FrogScript : MonoBehaviour
     {
         
         //Vector3 jumpDirection = transform.up;
-        rb.AddForce(transform.up * 50f);
-        rb.linearVelocity = Vector2.zero;
+        //rb.AddForce(transform.up * 50f);
+        //rb.linearVelocity = Vector2.zero;
+        transform.position += Vector3.up;
         //transform.position += transform.up * jumpDistance;
-        PlayAudio(frogJump); 
+        PlayAudio(frogJump);
+        StartCoroutine(Animate());
     }
 
     void RotateFrog()
@@ -52,6 +54,16 @@ public class FrogScript : MonoBehaviour
     {
         frogAudio.PlayOneShot(clip);
     }
+
+    private IEnumerator Animate()
+    {
+        for (int i = 0; i < frogSprites.Length; i++)
+        {
+            frogSprite.sprite = frogSprites[i];
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
 }
 
 
