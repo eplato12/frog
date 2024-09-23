@@ -6,7 +6,7 @@ public class WaterRotation : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = Random.Range(-10, 10);
+        speed = Random.Range(-20, 20);
     }
 
     // Update is called once per frame

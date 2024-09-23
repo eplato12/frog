@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FrogScript : MonoBehaviour
 {
@@ -27,8 +28,7 @@ public class FrogScript : MonoBehaviour
             Jump();
             if (!IsLily(transform.position))
             {
-                //FrogDie();
-                frogSprite.enabled = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
         RotateFrog();
