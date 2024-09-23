@@ -45,11 +45,11 @@ public class FrogScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(0, 0, 90 * Time.deltaTime); 
+            transform.Rotate(0, 0, 90 * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(0, 0, -90 * Time.deltaTime); 
+            transform.Rotate(0, 0, -90 * Time.deltaTime);
         }
     }
 
