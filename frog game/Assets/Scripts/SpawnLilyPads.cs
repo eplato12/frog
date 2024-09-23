@@ -5,11 +5,11 @@ public class SpawnLilyPads : MonoBehaviour
     public GameObject[] waterRings;
     public GameObject[] lillies;
 
-    private int[] numLillies = {23, 13, 8}; // array containing number of lillies for each water ring
+    private int[] numLillies = {20, 15, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
-        new Vector3((float)0.2685736, (float)0.2647871, 1),
-        new Vector3((float)0.2746775, (float)0.270805, 1),
-        new Vector3((float)0.3180476, (float)0.3135636, 1)};
+        new Vector3((float)0.3328913, (float)0.328198, 1),
+        new Vector3((float)0.3505113, (float)0.3406977, 1),
+        new Vector3((float)0.4058551, (float)0.394492, 1)};
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
