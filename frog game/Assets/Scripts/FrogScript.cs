@@ -35,9 +35,11 @@ public class FrogScript : MonoBehaviour
         //rb.linearVelocity = Vector2.zero;
         //transform.position += Vector3.forward;
         //transform.position += transform.up * jumpDistance;
-        Vector2 newPosition = rb.position + (Vector2)(transform.up * jumpDistance);
 
-        // Move the Rigidbody to the new position
+        //Vector2 newPosition = rb.position + (Vector2)(transform.up * jumpDistance);
+        Vector2 newPosition = rb.position + (Vector2) transform.up;
+
+
         rb.MovePosition(newPosition);
         PlayAudio(frogJump);
         StartCoroutine(Animate());
