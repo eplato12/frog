@@ -29,12 +29,16 @@ public class FrogScript : MonoBehaviour
 
     void Jump()
     {
-        
+
         //Vector3 jumpDirection = transform.up;
         //rb.AddForce(transform.up * 50f);
         //rb.linearVelocity = Vector2.zero;
         //transform.position += Vector3.forward;
-        transform.position += transform.up * jumpDistance;
+        //transform.position += transform.up * jumpDistance;
+        Vector2 newPosition = rb.position + (Vector2)(transform.up * jumpDistance);
+
+        // Move the Rigidbody to the new position
+        rb.MovePosition(newPosition);
         PlayAudio(frogJump);
         StartCoroutine(Animate());
     }
