@@ -7,6 +7,7 @@ public class FrogScript : MonoBehaviour
     public AudioClip frogJump;
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
+    private float jumpDistance = 1f;
     public Rigidbody2D rb;
 
 
@@ -32,8 +33,8 @@ public class FrogScript : MonoBehaviour
         //Vector3 jumpDirection = transform.up;
         //rb.AddForce(transform.up * 50f);
         //rb.linearVelocity = Vector2.zero;
-        transform.position += Vector3.up;
-        //transform.position += transform.up * jumpDistance;
+        //transform.position += Vector3.forward;
+        transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
         StartCoroutine(Animate());
     }
