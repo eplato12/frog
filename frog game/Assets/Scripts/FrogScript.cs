@@ -9,6 +9,7 @@ public class FrogScript : MonoBehaviour
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
     public Rigidbody2D rb;
+    public GameObject firstLily;
 
 
     void Start()
@@ -16,6 +17,7 @@ public class FrogScript : MonoBehaviour
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+        transform.parent = firstLily.transform;
     }
 
     void Update()
@@ -72,6 +74,8 @@ public class FrogScript : MonoBehaviour
         {
             if (collider.CompareTag("lily"))
             {
+                transform.parent = collider.gameObject.transform;
+                transform.localPosition = new Vector3(0, 0, 0);
                 return true;
             }
         }
