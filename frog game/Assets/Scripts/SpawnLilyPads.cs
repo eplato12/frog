@@ -5,7 +5,7 @@ public class SpawnLilyPads : MonoBehaviour
     public GameObject[] waterRings;
     public GameObject[] lillies;
 
-    private int[] numLillies = {20, 13, 8}; // array containing number of lillies for each water ring
+    private int[] numLillies = {23, 13, 8}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
         new Vector3((float)0.2685736, (float)0.2647871, 1),
         new Vector3((float)0.2746775, (float)0.270805, 1),
