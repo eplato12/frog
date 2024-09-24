@@ -79,7 +79,7 @@ public class SpawnLilyPads : MonoBehaviour
 
                 // choose what to spawn (lily, water, etc.)
                 float probLily = Random.Range(0, 10);
-                if (probLily < 7)
+                if (probLily < 8)
                 {
                     lily = lillies[i];
                 }
