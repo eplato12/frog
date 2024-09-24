@@ -37,6 +37,7 @@ public class FrogScript : MonoBehaviour
     void Jump()
     {
         transform.position += transform.up * jumpDistance;
+        IsPortal(transform.position);
         PlayAudio(frogJump);
         StartCoroutine(Animate());
     }
@@ -76,6 +77,20 @@ public class FrogScript : MonoBehaviour
             {
                 transform.parent = collider.gameObject.transform;
                 transform.localPosition = new Vector3(0, 0, 0);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected bool IsPortal(Vector2 gridPosition)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("portal"))
+            {
+                AdvanceScene.LoadNextScene();
                 return true;
             }
         }

@@ -6,7 +6,7 @@ public class AdvanceScene : MonoBehaviour
     public GameObject exitPanel;
     public GameObject playButton;
 
-    public void LoadNextScene()
+    public static void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
