@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
         else if (timeLeft < 0)
         {
             timeLeft = 0;
+            SceneManager.GetActiveScene();
         }
 
         int minutes = Mathf.FloorToInt(timeLeft / 60);
