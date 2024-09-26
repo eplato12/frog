@@ -18,11 +18,16 @@ public class FrogScript : MonoBehaviour
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
-        transform.parent = firstLily.transform;
+        //transform.parent = firstLily.transform;
+        transform.position = firstLily.transform.position;
     }
 
     void Update()
     {
+        if (transform.position != firstLily.transform.position)
+        {
+            firstLily.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
