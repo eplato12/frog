@@ -36,7 +36,6 @@ public class FrogScript : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
-        RotateFrog();
     }
 
     void Jump()
@@ -44,18 +43,6 @@ public class FrogScript : MonoBehaviour
         transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
         StartCoroutine(Animate());
-    }
-
-    void RotateFrog()
-    {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(0, 0, 90 * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(0, 0, -90 * Time.deltaTime);
-        }
     }
 
     private void PlayAudio(AudioClip clip)
@@ -81,6 +68,19 @@ public class FrogScript : MonoBehaviour
             {
                 transform.parent = collider.gameObject.transform;
                 transform.localPosition = new Vector3(0, 0, 0);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected bool IsPortal(Vector2 gridPosition)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("portal"))
+            {
                 return true;
             }
         }
