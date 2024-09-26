@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8248487544222226942}
   m_Layer: 0
   m_Name: Frog
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &3462809982385347042
 MonoBehaviour:
@@ -130,18 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf1602e2ebda4d559bb2f3d6eeeb11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frogSprites:
-  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
-  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
-  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
-  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
-  - {fileID: -3744932180068557138, guid: 67d3713552f854d0c8bdef3bc02d3628, type: 3}
-  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
-  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
-  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
-  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
-  frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
-  rb: {fileID: 0}
+  moveDistance: 2
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
