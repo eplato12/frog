@@ -6,11 +6,13 @@ public class FrogScript : MonoBehaviour
 {
     public Sprite[] frogSprites;
     public AudioClip frogJump;
+    public Rigidbody2D rb;
+    public GameObject firstLily;
+
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    public Rigidbody2D rb;
-    public GameObject firstLily;
+    private AdvanceScene advanceScene;
 
 
     void Start()
@@ -31,10 +33,16 @@ public class FrogScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+
+            if (IsPortal(transform.position))
+            {
+                advanceScene.LoadNextScene();
+            }
             if (!IsLily(transform.position))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
+
         }
     }
 
