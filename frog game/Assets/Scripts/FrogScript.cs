@@ -12,7 +12,7 @@ public class FrogScript : MonoBehaviour
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    private AdvanceScene advanceScene;
+    public AdvanceScene advanceScene;
 
 
     void Start()
@@ -36,13 +36,20 @@ public class FrogScript : MonoBehaviour
 
             if (IsPortal(transform.position))
             {
-                advanceScene.LoadNextScene();
+                string nextScene = GetNextScene(SceneManager.GetActiveScene().name);
+                if (!string.IsNullOrEmpty(nextScene))
+                {
+                    advanceScene.toLevel(nextScene);
+                }
             }
-            if (!IsLily(transform.position))
+            else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                // If the frog is not on a portal, check if it's on a lily pad
+                if (!IsLily(transform.position))
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload current scene
+                }
             }
-
         }
     }
 
@@ -51,6 +58,18 @@ public class FrogScript : MonoBehaviour
         transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
         StartCoroutine(Animate());
+    }
+
+    private string GetNextScene(string currentScene)
+    {
+        switch (currentScene)
+        {
+            case "Level 1": return "Level 2";
+            case "Level 2": return "Level 3";
+            case "Level 3": return "Level 4";
+            case "Level 4": return "Win";
+            default: return null;
+        }
     }
 
     private void PlayAudio(AudioClip clip)
@@ -89,9 +108,11 @@ public class FrogScript : MonoBehaviour
         {
             if (collider.CompareTag("portal"))
             {
+                Debug.Log("Frog is at a portal.");
                 return true;
             }
         }
+        Debug.Log("Frog is not at a portal.");
         return false;
     }
 

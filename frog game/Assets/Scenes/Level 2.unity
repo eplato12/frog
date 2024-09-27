@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: firstLily
       value: 
       objectReference: {fileID: 292092060}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: advanceScene
+      value: 
+      objectReference: {fileID: 1925248447}
     - target: {fileID: 7449770259442871832, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -1289,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243.26, y: 145.14}
+  m_AnchoredPosition: {x: -243.26001, y: 145.14}
   m_SizeDelta: {x: -486.51, y: -290.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691473943

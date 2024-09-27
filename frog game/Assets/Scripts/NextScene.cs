@@ -54,6 +54,7 @@ public class AdvanceScene : MonoBehaviour
 
     public void toLevel(string name)
     {
+        Debug.Log("Loading scene: " + name);
         SceneManager.LoadScene(name);
     }
 }
