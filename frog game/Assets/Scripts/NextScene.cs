@@ -58,9 +58,16 @@ public class AdvanceScene : MonoBehaviour
 
     public void toLevel(string name)
     {
-        Debug.Log("Loading scene: " + name);
         lastSceneName = SceneManager.GetActiveScene().name; // Store the current scene before changing
         SceneManager.LoadScene(name);
+    }
+
+    public void LoadLastScene()
+    {
+        if (!string.IsNullOrEmpty(lastSceneName))
+        {
+            SceneManager.LoadScene(lastSceneName);
+        }
     }
 
 }
