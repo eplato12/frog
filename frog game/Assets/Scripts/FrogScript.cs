@@ -52,6 +52,7 @@ public class FrogScript : MonoBehaviour
                 }
             }
             PlayAudio(splash);
+            StartCoroutine(advanceScene.LoadTempScene("Frog Die", SceneManager.GetActiveScene().name));
         }
     }
 

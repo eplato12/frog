@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AdvanceScene : MonoBehaviour
 {
@@ -56,5 +57,12 @@ public class AdvanceScene : MonoBehaviour
     {
         Debug.Log("Loading scene: " + name);
         SceneManager.LoadScene(name);
+    }
+
+    public IEnumerator LoadTempScene(string tempScene, string originalScene)
+    {
+        SceneManager.LoadScene(tempScene);
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(originalScene);
     }
 }
