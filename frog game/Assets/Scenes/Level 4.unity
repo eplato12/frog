@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: firstLily
       value: 
       objectReference: {fileID: 292092060}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: advanceScene
+      value: 
+      objectReference: {fileID: 1925248447}
     - target: {fileID: 7449770259442871832, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -1985,7 +1989,7 @@ SpriteRenderer:
   m_Size: {x: 3.41, y: 3.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1390570416

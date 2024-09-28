@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 67d3713552f854d0c8bdef3bc02d3628
+guid: f08f4681a5b8e45259adeb1f5401b441
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3744932180068557138
-    second: Frog5_0
-  - first:
-      213: 7226412161142249348
-    second: Frog5_1
-  - first:
-      213: -2771581700270436042
-    second: Frog5_2
-  - first:
-      213: 6630316229522405568
-    second: Frog5_3
-  - first:
-      213: 5820618483368277966
-    second: Frog5_4
+      213: 7074130397357979533
+    second: Frog(v2)5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog5_0
+      name: Frog(v2)5_0
       rect:
         serializedVersion: 2
-        x: 753
-        y: 149
-        width: 585
-        height: 1045
+        x: 614
+        y: 9
+        width: 620
+        height: 993
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eae95131604570cc0800000000000000
-      internalID: -3744932180068557138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog5_1
-      rect:
-        serializedVersion: 2
-        x: 945
-        y: 1190
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4875279c29f594460800000000000000
-      internalID: 7226412161142249348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog5_2
-      rect:
-        serializedVersion: 2
-        x: 1146
-        y: 1190
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6315869c02d5989d0800000000000000
-      internalID: -2771581700270436042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog5_3
-      rect:
-        serializedVersion: 2
-        x: 854
-        y: 126
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c8b0395b7d930c50800000000000000
-      internalID: 6630316229522405568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Frog5_4
-      rect:
-        serializedVersion: 2
-        x: 1229
-        y: 126
-        width: 8
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec73d32fbadf6c050800000000000000
-      internalID: 5820618483368277966
+      spriteID: d87b055bd1c5c2260800000000000000
+      internalID: 7074130397357979533
       vertices: []
       indices: 
       edges: []
@@ -247,12 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frog5_0: -3744932180068557138
-      Frog5_1: 7226412161142249348
-      Frog5_2: -2771581700270436042
-      Frog5_3: 6630316229522405568
-      Frog5_4: 5820618483368277966
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

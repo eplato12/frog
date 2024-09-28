@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
+  m_Sprite: {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.87, y: 8.890868}
+  m_Size: {x: 4.8599997, y: 8.660846}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -131,17 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frogSprites:
-  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
-  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
-  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
-  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
-  - {fileID: -3744932180068557138, guid: 67d3713552f854d0c8bdef3bc02d3628, type: 3}
-  - {fileID: 1574226018073689978, guid: ee2c9ea84bd1d4e9a8209e43ba2b3fd9, type: 3}
-  - {fileID: -2498532570191983982, guid: edd498f41ba4e4612985154acdc10021, type: 3}
-  - {fileID: 8688989734150688896, guid: db7818d25369f48a990baf0c2e3c8037, type: 3}
-  - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
+  - {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
+  - {fileID: -7007856695457053032, guid: 4f39a1e2d78ed4fecb49608e26467192, type: 3}
+  - {fileID: -4185735883379087729, guid: 6e5bac58bc53b4b5f989c41474469bd8, type: 3}
+  - {fileID: -4580034164647364149, guid: 77764e4f615e240fa85507ed3fcaa56c, type: 3}
+  - {fileID: 7074130397357979533, guid: f08f4681a5b8e45259adeb1f5401b441, type: 3}
+  - {fileID: -4580034164647364149, guid: 77764e4f615e240fa85507ed3fcaa56c, type: 3}
+  - {fileID: -4185735883379087729, guid: 6e5bac58bc53b4b5f989c41474469bd8, type: 3}
+  - {fileID: -7007856695457053032, guid: 4f39a1e2d78ed4fecb49608e26467192, type: 3}
+  - {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
   frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
+  splash: {fileID: 8300000, guid: 70347be33cdef421f9a4ab3069fd27d8, type: 3}
   rb: {fileID: 0}
+  firstLily: {fileID: 0}
+  advanceScene: {fileID: 0}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -155,7 +158,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -277,8 +280,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.87, y: 8.890868}
-    newSize: {x: 4.87, y: 8.890868}
+    oldSize: {x: 4.8599997, y: 8.660846}
+    newSize: {x: 4.8599997, y: 8.660846}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
