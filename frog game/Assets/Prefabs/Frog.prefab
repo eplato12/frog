@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3462809982385347042}
   - component: {fileID: -4929996090955134628}
   - component: {fileID: 8248487544222226942}
+  - component: {fileID: -3520051917228689037}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Untagged
@@ -145,6 +146,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   firstLily: {fileID: 0}
   advanceScene: {fileID: 0}
+  frogAnimator: {fileID: 0}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -547,3 +549,25 @@ PolygonCollider2D:
       - {x: -1.2454202, y: -4.322261}
       - {x: -1.1018655, y: -4.414546}
   m_UseDelaunayMesh: 0
+--- !u!95 &-3520051917228689037
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249720705030152005}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36c4ed44cfbef445f9a7ee7baf4b9e34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

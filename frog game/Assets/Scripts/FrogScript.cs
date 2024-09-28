@@ -14,15 +14,18 @@ public class FrogScript : MonoBehaviour
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    
+    private bool isJumping = false;
+    private Animator frogAnimator;
+
 
     void Start()
     {
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
-        //transform.parent = firstLily.transform;
+        frogAnimator = GetComponent<Animator>();
         transform.position = firstLily.transform.position;
+        frogAnimator.SetBool("isJumping", false);
     }
 
     void Update()
@@ -32,7 +35,7 @@ public class FrogScript : MonoBehaviour
             firstLily.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             Jump();
             if (IsPortal(transform.position))
@@ -47,15 +50,23 @@ public class FrogScript : MonoBehaviour
             {
                 IsLily(transform.position);
             }
-
         }
     }
 
     void Jump()
     {
+        isJumping = true;
+        frogAnimator.SetBool("isJumping", true);
         transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
-        StartCoroutine(Animate());
+        StartCoroutine(HandleLanding());
+    }
+
+    private IEnumerator HandleLanding()
+    {
+        yield return new WaitForSeconds(0.2f);
+        isJumping = false; // Reset jumping state
+        frogAnimator.SetBool("isJumping", false); // Set animator to idle
     }
 
     private string GetNextScene(string currentScene)
@@ -75,15 +86,6 @@ public class FrogScript : MonoBehaviour
         frogAudio.PlayOneShot(clip);
     }
 
-    private IEnumerator Animate()
-    {
-        for (int i = 0; i < frogSprites.Length; i++)
-        {
-            frogSprite.sprite = frogSprites[i];
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-
     protected void IsLily(Vector2 gridPosition)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
@@ -93,22 +95,18 @@ public class FrogScript : MonoBehaviour
         {
             if (collider.CompareTag("lily"))
             {
-                // Parent to the lily and reset position
                 transform.parent = collider.gameObject.transform;
-                transform.localPosition = Vector3.zero; // Set to local position (0, 0, 0)
-                isOnLily = true; // Set flag indicating we're on a lily
-                break; // Exit loop if we've found a lily pad
+                transform.localPosition = Vector3.zero;
+                isOnLily = true;
+                break;
             }
         }
-
-        // If not on a lily, handle splash
         if (!isOnLily)
         {
             PlayAudio(splash);
-            advanceScene.toLevel("Frog Die"); // Transition to "Frog Die"
+            advanceScene.toLevel("Frog Die");
         }
     }
-
 
     protected bool IsPortal(Vector2 gridPosition)
     {

@@ -63,17 +63,4 @@ public class AdvanceScene : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    public void LoadLastScene()
-    {
-        if (!string.IsNullOrEmpty(lastSceneName))
-        {
-            Debug.Log("Loading last scene: " + lastSceneName);
-            SceneManager.LoadScene(lastSceneName);
-        }
-        else
-        {
-            Debug.LogError("No last scene found.");
-        }
-    }
-
 }
