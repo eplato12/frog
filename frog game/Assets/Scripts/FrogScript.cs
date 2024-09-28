@@ -11,10 +11,12 @@ public class FrogScript : MonoBehaviour
     public GameObject firstLily;
     public AdvanceScene advanceScene;
 
+    [SerializeField] private ParticleSystem bubbleSystem;
+
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    
+    private ParticleSystem bubbleSystemInstance;
 
     void Start()
     {
@@ -46,7 +48,11 @@ public class FrogScript : MonoBehaviour
             else
             {
                 // If the frog is not on a portal, check if it's on a lily pad
-                if (!IsLily(transform.position))
+                if (IsLily(transform.position))
+                {
+                    spawnBubbles();
+                }
+                else
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload current scene
                 }
@@ -117,6 +123,10 @@ public class FrogScript : MonoBehaviour
         return false;
     }
 
+    private void spawnBubbles()
+    {
+        bubbleSystemInstance = Instantiate(bubbleSystem, transform.position, Quaternion.identity);
+    }
 }
 
 
