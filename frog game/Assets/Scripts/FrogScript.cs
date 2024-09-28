@@ -11,12 +11,10 @@ public class FrogScript : MonoBehaviour
     public GameObject firstLily;
     public AdvanceScene advanceScene;
 
-    [SerializeField] private ParticleSystem bubbleSystem;
-
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    private ParticleSystem bubbleSystemInstance;
+    
 
     void Start()
     {
@@ -33,10 +31,10 @@ public class FrogScript : MonoBehaviour
         {
             firstLily.SetActive(false);
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
-
             if (IsPortal(transform.position))
             {
                 string nextScene = GetNextScene(SceneManager.GetActiveScene().name);
@@ -47,18 +45,9 @@ public class FrogScript : MonoBehaviour
             }
             else
             {
-                // If the frog is not on a portal, check if it's on a lily pad
-                if (IsLily(transform.position))
-                {
-                    spawnBubbles();
-                }
-                else
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload current scene
-                }
+                IsLily(transform.position);
             }
-            PlayAudio(splash);
-            StartCoroutine(advanceScene.LoadTempScene("Frog Die", SceneManager.GetActiveScene().name));
+
         }
     }
 
@@ -95,20 +84,31 @@ public class FrogScript : MonoBehaviour
         }
     }
 
-    protected bool IsLily(Vector2 gridPosition)
+    protected void IsLily(Vector2 gridPosition)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        bool isOnLily = false; // Flag to check if on a lily pad
+
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("lily"))
             {
+                // Parent to the lily and reset position
                 transform.parent = collider.gameObject.transform;
-                transform.localPosition = new Vector3(0, 0, 0);
-                return true;
+                transform.localPosition = Vector3.zero; // Set to local position (0, 0, 0)
+                isOnLily = true; // Set flag indicating we're on a lily
+                break; // Exit loop if we've found a lily pad
             }
         }
-        return false;
+
+        // If not on a lily, handle splash
+        if (!isOnLily)
+        {
+            PlayAudio(splash);
+            advanceScene.toLevel("Frog Die"); // Transition to "Frog Die"
+        }
     }
+
 
     protected bool IsPortal(Vector2 gridPosition)
     {
@@ -123,10 +123,6 @@ public class FrogScript : MonoBehaviour
         return false;
     }
 
-    private void spawnBubbles()
-    {
-        bubbleSystemInstance = Instantiate(bubbleSystem, transform.position, Quaternion.identity);
-    }
 }
 
 
