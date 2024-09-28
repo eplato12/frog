@@ -6,14 +6,15 @@ public class FrogScript : MonoBehaviour
 {
     public Sprite[] frogSprites;
     public AudioClip frogJump;
+    public AudioClip splash;
     public Rigidbody2D rb;
     public GameObject firstLily;
+    public AdvanceScene advanceScene;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    public AdvanceScene advanceScene;
-
+    
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class FrogScript : MonoBehaviour
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload current scene
                 }
             }
+            PlayAudio(splash);
         }
     }
 
@@ -108,11 +110,9 @@ public class FrogScript : MonoBehaviour
         {
             if (collider.CompareTag("portal"))
             {
-                Debug.Log("Frog is at a portal.");
                 return true;
             }
         }
-        Debug.Log("Frog is not at a portal.");
         return false;
     }
 
