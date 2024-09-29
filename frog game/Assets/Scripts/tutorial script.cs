@@ -19,6 +19,11 @@ public class tutorialscript : MonoBehaviour
             Destroy(UIelement);
             _hasInitialized = true;
         }
+
+        if (trigger == KeyCode.None)
+        {
+            _hasInitialized = true;
+        }
     }
 
     private void Awake()

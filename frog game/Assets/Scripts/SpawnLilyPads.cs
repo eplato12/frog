@@ -14,9 +14,9 @@ public class SpawnLilyPads : MonoBehaviour
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
-        new Vector3((float)0.3328913, (float)0.328198, 1),
-        new Vector3((float)0.3505113, (float)0.3406977, 1),
-        new Vector3((float)0.4058551, (float)0.394492, 1)}; // array containing the local scales of each lily
+            new Vector3((float)0.3328913, (float)0.328198, 1),
+            new Vector3((float)0.3505113, (float)0.3406977, 1),
+            new Vector3((float)0.4058551, (float)0.394492, 1)}; // array containing the local scales of each lily
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -184,7 +184,7 @@ public class SpawnLilyPads : MonoBehaviour
 
     private IEnumerator RespawnPortal(List<GameObject> lillies)
     {
-        GameObject portalLily = lillies[15];
+        GameObject portalLily = lillies[35];
         portalLily.SetActive(false);
 
         GameObject newPortal = Instantiate(portal, portalLily.transform.position, Quaternion.identity);
@@ -192,7 +192,7 @@ public class SpawnLilyPads : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(3, 8));
+            yield return new WaitForSeconds(Random.Range(6, 10));
 
             // reactivate portalLily + remove portal
             portalLily.SetActive(true);
