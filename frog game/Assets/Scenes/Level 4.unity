@@ -282,6 +282,7 @@ Transform:
   m_Children:
   - {fileID: 292092061}
   - {fileID: 186608381}
+  - {fileID: 1888811934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186608379
@@ -2940,6 +2941,68 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0031425168}
   m_Radius: 0.71574163
+--- !u!1001 &1888811933
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 151260661}
+    m_Modifications:
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216477398973611367, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_Name
+      value: bubble bg particle system
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+--- !u!4 &1888811934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3706403931665694574, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+  m_PrefabInstance: {fileID: 1888811933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1925248446
 GameObject:
   m_ObjectHideFlags: 0
