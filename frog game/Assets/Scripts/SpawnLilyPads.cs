@@ -5,7 +5,6 @@ public class SpawnLilyPads : MonoBehaviour
 
    
 {
-    public GameObject[] waterRings;
    public GameObject evilLilies;
    public GameObject[] waterRings;
     public GameObject[] lillies;
@@ -102,12 +101,10 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
-    private void SpawnLevel3()
 
 
     private IEnumerator SpawnLevel3()
     {
-        SpawnLevel1();
         // get radius of each circle by position of first lillies
         float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
 
