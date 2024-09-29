@@ -1,19 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class AdvanceScene : MonoBehaviour
 {
     public GameObject exitPanel;
     public GameObject playButton;
+    private static string lastSceneName;
+
 
     public void LoadNextScene()
     {
+        lastSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void openExitPanel()
     {
-        if(exitPanel != null)
+        if (exitPanel != null)
         {
             exitPanel.SetActive(true);
             Time.timeScale = 0;
@@ -54,6 +58,16 @@ public class AdvanceScene : MonoBehaviour
 
     public void toLevel(string name)
     {
+        lastSceneName = SceneManager.GetActiveScene().name; // Store the current scene before changing
         SceneManager.LoadScene(name);
     }
+
+    public void LoadLastScene()
+    {
+        if (!string.IsNullOrEmpty(lastSceneName))
+        {
+            SceneManager.LoadScene(lastSceneName);
+        }
+    }
+
 }
