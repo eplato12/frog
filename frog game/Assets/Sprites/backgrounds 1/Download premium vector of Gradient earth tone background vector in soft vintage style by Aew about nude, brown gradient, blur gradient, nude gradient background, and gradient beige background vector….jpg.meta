@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 061d8e16ef23d4e268db5bcd7b969a3d
+guid: e7dc28c779fe04c48baf03d83fdbdab5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4815476061570213978
-    second: star_0
+      213: 5881420669342377799
+    second: "Download premium vector of Gradient earth tone background vector in
+      soft vintage style by Aew about nude, brown gradient, blur gradient, nude gradient
+      background, and gradient beige background vector\u2026_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: star_0
+      name: "Download premium vector of Gradient earth tone background vector in
+        soft vintage style by Aew about nude, brown gradient, blur gradient, nude
+        gradient background, and gradient beige background vector\u2026_0"
       rect:
         serializedVersion: 2
-        x: 135
-        y: 228
-        width: 108
-        height: 114
+        x: 0
+        y: 0
+        width: 735
+        height: 1104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a582a4ae6f104d240800000000000000
-      internalID: 4815476061570213978
+      spriteID: 747eaca00f00f9150800000000000000
+      internalID: 5881420669342377799
       vertices: []
       indices: 
       edges: []
@@ -147,8 +151,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      star_0: 4815476061570213978
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

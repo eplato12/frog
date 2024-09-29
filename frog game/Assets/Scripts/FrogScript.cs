@@ -51,6 +51,8 @@ public class FrogScript : MonoBehaviour
                 IsLily(transform.position);
             }
         }
+
+
     }
 
     void Jump()

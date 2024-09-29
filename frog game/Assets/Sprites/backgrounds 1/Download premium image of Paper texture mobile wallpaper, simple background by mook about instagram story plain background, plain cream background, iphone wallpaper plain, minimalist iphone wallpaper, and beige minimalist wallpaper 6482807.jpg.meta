@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 061d8e16ef23d4e268db5bcd7b969a3d
+guid: 8509f4ca770d54d51a2c822ae1064b10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4815476061570213978
-    second: star_0
+      213: 852821096255686791
+    second: Download premium image of Paper texture mobile wallpaper, simple background
+      by mook about instagram story plain background, plain cream background, iphone
+      wallpaper plain, minimalist iphone wallpaper, and beige minimalist wallpaper
+      6482807_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: star_0
+      name: Download premium image of Paper texture mobile wallpaper, simple background
+        by mook about instagram story plain background, plain cream background, iphone
+        wallpaper plain, minimalist iphone wallpaper, and beige minimalist wallpaper
+        6482807_0
       rect:
         serializedVersion: 2
-        x: 135
-        y: 228
-        width: 108
-        height: 114
+        x: 0
+        y: 0
+        width: 563
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a582a4ae6f104d240800000000000000
-      internalID: 4815476061570213978
+      spriteID: 7888743c444d5db00800000000000000
+      internalID: 852821096255686791
       vertices: []
       indices: 
       edges: []
@@ -147,8 +153,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      star_0: 4815476061570213978
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
