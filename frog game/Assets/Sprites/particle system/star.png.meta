@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a238b9974fcad41edbb844d38ba8b845
+guid: 061d8e16ef23d4e268db5bcd7b969a3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8836224742204046172
-    second: Subject 10_0
+      213: 4815476061570213978
+    second: star_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Subject 10_0
+      name: star_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 1505
-        height: 1393
+        x: 135
+        y: 228
+        width: 108
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a4096dc96c6f5580800000000000000
-      internalID: -8836224742204046172
+      spriteID: a582a4ae6f104d240800000000000000
+      internalID: 4815476061570213978
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Subject 10_0: -8836224742204046172
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
