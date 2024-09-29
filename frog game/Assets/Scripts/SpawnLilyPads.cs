@@ -1,14 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SpawnLilyPads : MonoBehaviour
 
    
 {
-   public GameObject evilLilies;
-   public GameObject[] waterRings;
+    public GameObject evilLilies;
+    public GameObject[] waterRings;
     public GameObject[] lillies;
     public int level;
+    public GameObject portal;
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
@@ -101,8 +103,6 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
-
-
     private IEnumerator SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
@@ -148,14 +148,63 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
-
-
     private void SpawnLevel4()
     {
-        SpawnLevel1();
+        // this level will choose a location to spawn the portal at multiple times throughout the game
+        List<GameObject> spawnedLillies = new List<GameObject>();
+
+        // get radius of each circle by position of first lillies
+        float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
+
+        // loop through all three layers
+        for (int i = 0; i < numLillies.Length; i++)
+        {
+            // to make the correct number of lillies in each layer
+            for (int j = 1; j < numLillies[i]; j++)
+            {
+                // get x and y position of new lily (depends on number of lillies)
+                float xPos = radii[i] * Mathf.Cos(2 * j * Mathf.PI / numLillies[i]);
+                float yPos = radii[i] * Mathf.Sin(2 * j * Mathf.PI / numLillies[i]);
+
+                // instantiate that object 
+                GameObject lily = Instantiate(lillies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
+
+                // set it as a child of the water rings to make it rotate 
+                lily.transform.parent = waterRings[i].transform;
+                lily.transform.localScale = lilyScales[i];
+
+                // add lily to array to access later
+                spawnedLillies.Add(lily);
+            }
+        }
+
+        // spawn the portal at random locations throughout the game
+        StartCoroutine(RespawnPortal(spawnedLillies));
     }
 
+    private IEnumerator RespawnPortal(List<GameObject> lillies)
+    {
+        GameObject portalLily = lillies[15];
+        portalLily.SetActive(false);
 
+        GameObject newPortal = Instantiate(portal, portalLily.transform.position, Quaternion.identity);
+        newPortal.transform.parent = portalLily.transform.parent;
 
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(3, 8));
 
+            // reactivate portalLily + remove portal
+            portalLily.SetActive(true);
+            Destroy(newPortal);
+
+            // choose a new lily to replace with portal
+            portalLily = lillies[(int)Mathf.Floor(Random.Range(0, lillies.Count - 1))];
+            portalLily.SetActive(false);
+
+            // create a portal at that location
+            newPortal = Instantiate(portal, portalLily.transform.position, Quaternion.identity);
+            newPortal.transform.parent = portalLily.transform.parent;
+        }
+    }
 }
