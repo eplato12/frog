@@ -1,8 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnLilyPads : MonoBehaviour
+
+   
 {
     public GameObject[] waterRings;
+   public GameObject evilLilies;
+   public GameObject[] waterRings;
     public GameObject[] lillies;
     public int level;
 
@@ -98,12 +103,62 @@ public class SpawnLilyPads : MonoBehaviour
     }
 
     private void SpawnLevel3()
+
+
+    private IEnumerator SpawnLevel3()
     {
         SpawnLevel1();
+        // get radius of each circle by position of first lillies
+        float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
+
+        // loop through all three layers
+        for (int i = 0; i < numLillies.Length; i++)
+        {
+            // to make the correct number of lillies in each layer
+            for (int j = 1; j < numLillies[i]; j++)
+            {
+                // get x and y position of new lily (depends on number of lillies)
+                float xPos = radii[i] * Mathf.Cos(2 * j * Mathf.PI / numLillies[i]);
+                float yPos = radii[i] * Mathf.Sin(2 * j * Mathf.PI / numLillies[i]);
+
+                GameObject lily = null;
+
+                // choose what to spawn (lily, water, etc.)
+                float probLily = Random.Range(0, 10);
+                if (probLily < 7)
+                {
+                    lily = lillies[i];
+                }
+
+                if (lily != null)
+                {
+                    // instantiate that object 
+                    lily = Instantiate(lillies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
+
+                    // set it as a child of the water rings to make it rotate 
+                    lily.transform.parent = waterRings[i].transform;
+                    lily.transform.localScale = lilyScales[i];
+
+                    yield return new WaitForSeconds(2f);
+                    GameObject evilLilySpawn = Instantiate(evilLilies, new Vector3(xPos, yPos, 1), Quaternion.identity);
+                    lily.GetComponent<Renderer>().enabled = false;
+
+                    yield return new WaitForSeconds(1f);
+                        Destroy(lily);
+
+                }
+            }
+        }
     }
+
+
 
     private void SpawnLevel4()
     {
         SpawnLevel1();
     }
+
+
+
+
 }
