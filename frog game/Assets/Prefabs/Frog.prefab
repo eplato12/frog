@@ -142,11 +142,10 @@ MonoBehaviour:
   - {fileID: -7007856695457053032, guid: 4f39a1e2d78ed4fecb49608e26467192, type: 3}
   - {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
   frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
-  splash: {fileID: 8300000, guid: 70347be33cdef421f9a4ab3069fd27d8, type: 3}
+  splash: {fileID: 8300000, guid: a8ff3d2c135aa4933ab10403f53087af, type: 3}
   rb: {fileID: 0}
   firstLily: {fileID: 0}
   advanceScene: {fileID: 0}
-  frogAnimator: {fileID: 0}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0

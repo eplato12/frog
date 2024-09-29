@@ -14,7 +14,6 @@ public class FrogScript : MonoBehaviour
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
-    private bool isJumping = false;
     private Animator frogAnimator;
 
 
@@ -24,6 +23,7 @@ public class FrogScript : MonoBehaviour
         frogAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         frogAnimator = GetComponent<Animator>();
+        frogSprite.enabled = true;
         transform.position = firstLily.transform.position;
         frogAnimator.SetBool("isJumping", false);
     }
@@ -35,7 +35,7 @@ public class FrogScript : MonoBehaviour
             firstLily.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
             if (IsPortal(transform.position))
@@ -55,7 +55,6 @@ public class FrogScript : MonoBehaviour
 
     void Jump()
     {
-        isJumping = true;
         frogAnimator.SetBool("isJumping", true);
         transform.position += transform.up * jumpDistance;
         PlayAudio(frogJump);
@@ -64,9 +63,8 @@ public class FrogScript : MonoBehaviour
 
     private IEnumerator HandleLanding()
     {
-        yield return new WaitForSeconds(0.2f);
-        isJumping = false; // Reset jumping state
-        frogAnimator.SetBool("isJumping", false); // Set animator to idle
+        yield return new WaitForSeconds(frogAnimator.GetCurrentAnimatorStateInfo(0).length);
+        frogAnimator.SetBool("isJumping", false);  
     }
 
     private string GetNextScene(string currentScene)
@@ -103,10 +101,18 @@ public class FrogScript : MonoBehaviour
         }
         if (!isOnLily)
         {
+            frogSprite.enabled = false;
             PlayAudio(splash);
-            advanceScene.toLevel("Frog Die");
+            Invoke("GoToDeathScene", 2.0f);
+
         }
     }
+
+    private void GoToDeathScene()
+    {
+        advanceScene.toLevel("Frog Die");
+    }
+
 
     protected bool IsPortal(Vector2 gridPosition)
     {
