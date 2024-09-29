@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: 2820143329777312509, guid: b4a8f5de916074ba095740fb8a34ad67, type: 3}
   frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
   rb: {fileID: 0}
+  firstLily: {fileID: 0}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
