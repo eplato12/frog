@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1872d37db82d94fac8dd14b1e4c097a6
+guid: 8d99ba876c3454fc28cba1ab22ad161e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4185735883379087729
-    second: Frog(v2)3_0
+      213: -765150924802650856
+    second: arrow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frog(v2)3_0
+      name: arrow_0
       rect:
         serializedVersion: 2
-        x: 658
-        y: 58
-        width: 492
-        height: 944
+        x: 230
+        y: 46
+        width: 108
+        height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f86659b146749e5c0800000000000000
-      internalID: -4185735883379087729
+      spriteID: 81d839fa943a165f0800000000000000
+      internalID: -765150924802650856
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frog(v2)3_0: -4185735883379087729
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
