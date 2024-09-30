@@ -11,6 +11,7 @@ public class SpawnLilyPads : MonoBehaviour
     public GameObject[] lillies;
     public int level;
     public GameObject portal;
+    public GameObject star;
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
@@ -106,7 +107,21 @@ public class SpawnLilyPads : MonoBehaviour
                 spawnedLillies.Add(lily);
             }
         }
+
+       
+        // randomly select lillies to spawn a star on
+        GameObject[] starLillies = new GameObject[3];
+
+        for (int i = 0; i < 2; i++)
+        {
+            // choose a lily to spawn a star on
+            GameObject starLily = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))]; ;
+
+            // spawn a star on that lily 
+            GameObject star1 = Instantiate(star, starLily.transform.position, Quaternion.identity);
+            star1.transform.parent = starLily.transform;
         
+        }
     }
 
     
