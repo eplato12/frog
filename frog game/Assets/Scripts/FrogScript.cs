@@ -88,7 +88,7 @@ public class FrogScript : MonoBehaviour
         frogAudio.PlayOneShot(clip);
     }
 
-    protected void IsLily(Vector2 gridPosition)
+    private void IsLily(Vector2 gridPosition)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
         bool isOnLily = false; // Flag to check if on a lily pad
@@ -115,10 +115,10 @@ public class FrogScript : MonoBehaviour
         {
             frogSprite.enabled = false;
             PlayAudio(splash);
-            Invoke("GoToDeathScene", 2.0f);
-
+            advanceScene.Invoke("ReloadScene", 0.5f);
         }
     }
+
 
     private void SpeedUpLilies()
     {
@@ -130,13 +130,16 @@ public class FrogScript : MonoBehaviour
 
 
 
-    private void GoToDeathScene()
+
+
+    public void GoToDeathScene()
+
     {
         advanceScene.toLevel("Frog Die");
     }
 
 
-    protected bool IsPortal(Vector2 gridPosition)
+    private bool IsPortal(Vector2 gridPosition)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
         foreach (Collider2D collider in colliders)

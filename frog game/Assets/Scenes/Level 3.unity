@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bubble bg particle system
       objectReference: {fileID: 0}
+    - target: {fileID: 5216477398973611367, guid: 404db410a3bf54bd8b9c67166868eabb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1412,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 30
   timerText: {fileID: 1577198413}
+  frogScript: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
 --- !u!4 &599976473
 Transform:
   m_ObjectHideFlags: 0
