@@ -27,10 +27,11 @@ public class FrogScript : MonoBehaviour
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
-    private float jumpDistance = 1f;
     private Animator frogAnimator;
-    private float newSpeed = 2.0f;
     private Coroutine randomSoundCoroutine;
+    private float jumpDistance = 1f;
+    private float newSpeed = 2.0f;
+    
 
 
     void Start()
@@ -164,7 +165,6 @@ public class FrogScript : MonoBehaviour
 
 
     public void GoToDeathScene()
-
     {
         advanceScene.toLevel("Frog Die");
     }
