@@ -9,6 +9,11 @@ public class AdvanceScene : MonoBehaviour
     private static string lastSceneName;
 
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void LoadNextScene()
     {
         lastSceneName = SceneManager.GetActiveScene().name;

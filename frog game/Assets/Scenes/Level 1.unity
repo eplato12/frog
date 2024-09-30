@@ -1423,6 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 30
   timerText: {fileID: 1714807986}
+  frogScript: {fileID: 1429214140}
 --- !u!4 &812075984
 Transform:
   m_ObjectHideFlags: 0
@@ -2687,6 +2688,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 620360053519073682, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
   m_PrefabInstance: {fileID: 1429214138}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429214140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+  m_PrefabInstance: {fileID: 1429214138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1602e2ebda4d559bb2f3d6eeeb11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1429214141 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: -4929996090955134628, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
@@ -3238,7 +3250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -187.07, y: -76.075}
+  m_AnchoredPosition: {x: -187.07, y: -76.07501}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1752003181 stripped

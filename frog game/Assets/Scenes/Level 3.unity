@@ -1407,6 +1407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 30
   timerText: {fileID: 1577198413}
+  frogScript: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
 --- !u!4 &599976473
 Transform:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4929996090955134628}
   - component: {fileID: 8248487544222226942}
   - component: {fileID: -3520051917228689037}
+  - component: {fileID: -435661536521807678}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Untagged
@@ -145,7 +146,7 @@ MonoBehaviour:
   splash: {fileID: 8300000, guid: a8ff3d2c135aa4933ab10403f53087af, type: 3}
   rb: {fileID: 0}
   firstLily: {fileID: 0}
-  advanceScene: {fileID: 0}
+  advanceScene: {fileID: -435661536521807678}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -570,3 +571,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-435661536521807678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3249720705030152005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9120aab0165e48d5a486383f2c89ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitPanel: {fileID: 0}
+  playButton: {fileID: 0}
