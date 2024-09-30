@@ -199,6 +199,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 75583816}
     - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: level
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 1963800475}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: firstLily
       value: 
       objectReference: {fileID: 516606352}

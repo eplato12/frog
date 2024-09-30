@@ -47,7 +47,6 @@ public class SpawnLilyPads : MonoBehaviour
         else if (level == 5)
         {
             SpawnLevel5();
-            portal.SetActive(false);
         }
     }
 

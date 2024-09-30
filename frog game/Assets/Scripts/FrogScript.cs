@@ -24,6 +24,10 @@ public class FrogScript : MonoBehaviour
     [Header("GameObjects")]
     public GameObject firstLily;
     public GameObject arrow;
+    public GameObject portal;
+
+    [Header("Level Indicator")]
+    public int level;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
@@ -31,6 +35,7 @@ public class FrogScript : MonoBehaviour
     private Coroutine randomSoundCoroutine;
     private float jumpDistance = 1f;
     private float newSpeed = 2.0f;
+    private int starCounter = 0; // for level 5 portal activation
     
 
 
@@ -44,6 +49,11 @@ public class FrogScript : MonoBehaviour
         transform.position = firstLily.transform.position;
         frogAnimator.SetBool("isJumping", false);
         randomSoundCoroutine = StartCoroutine(PlaySoundRandomly(ribbitSound));
+
+        if (level == 5)
+        {
+            portal.SetActive(false);
+        }
     }
 
     void Update()
@@ -56,15 +66,21 @@ public class FrogScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+            if (starCounter == 2)
+            {
+                portal.SetActive(true);
+            }
+
             if (IsPortal(transform.position))
             {
                 Invoke("HandlePortal", 1.0f);
             }
+            
             else
             {
                 IsLily(transform.position);
             }
-        }
+        } 
 
     }
 
@@ -135,6 +151,7 @@ public class FrogScript : MonoBehaviour
             if (collider.CompareTag("star"))
             {
                 collider.gameObject.SetActive(false);
+                starCounter++;
             }
             else if (collider.CompareTag("evilLily"))
             {
