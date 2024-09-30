@@ -32,7 +32,7 @@ public class SpawnLilyPads : MonoBehaviour
         }
         else if (level == 3)
         {
-            StartCoroutine(SpawnLevel3());
+            SpawnLevel3();
         }
         else if (level == 4)
         {
@@ -103,9 +103,9 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
-    
 
-    private IEnumerator SpawnLevel3()
+
+    private void SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
         float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
@@ -131,30 +131,23 @@ public class SpawnLilyPads : MonoBehaviour
 
                 if (lily != null)
                 {
-                   
+
                     lily = Instantiate(lillies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
 
-                    
+
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
 
-                    yield return new WaitForSeconds(2f);
-                    float probEvil = Random.Range(0, 10);
-                    if (probEvil <= 10)
-                    {
-                        GameObject evilLily = Instantiate(evilLilies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
-                        evilLily.transform.parent = waterRings[i].transform;
-                        evilLily.transform.localScale = lilyScales[i];
-                        lily.SetActive(false);
 
-                        yield return new WaitForSeconds(1f);
-                        Destroy(lily);
-                    }
+
 
                 }
             }
         }
     }
+            
+        
+    
 
     private void SpawnLevel4()
     {

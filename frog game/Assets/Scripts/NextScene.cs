@@ -64,6 +64,7 @@ public class AdvanceScene : MonoBehaviour
     public void toLevel(string name)
     {
         lastSceneName = SceneManager.GetActiveScene().name; // Store the current scene before changing
+        if (Input.GetKeyDown(KeyCode.Space))
         SceneManager.LoadScene(name);
     }
 
