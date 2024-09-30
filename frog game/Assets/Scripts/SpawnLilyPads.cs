@@ -102,26 +102,21 @@ public class SpawnLilyPads : MonoBehaviour
                     // set it as a child of the water rings to make it rotate 
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
+
+                    spawnedLillies.Add(lily);
                 }
 
-                spawnedLillies.Add(lily);
+                
             }
         }
 
-       
         // randomly select lillies to spawn a star on
-        for (int i = 0; i < 2; i++)
-        {
-            // choose a lily to spawn a star on
-            GameObject starLily = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))]; ;
-
-            // spawn a star on that lily 
-            GameObject star1 = Instantiate(star, starLily.transform.position, Quaternion.identity);
-            star1.transform.parent = starLily.transform;
-        
-        }
+        GameObject starLily1 = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))]; 
+        // spawn a star on that lily 
+        GameObject star1 = Instantiate(star, starLily1.transform.position, Quaternion.identity);
+        star1.transform.parent = starLily1.transform;
     }
-    
+
     private IEnumerator SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
