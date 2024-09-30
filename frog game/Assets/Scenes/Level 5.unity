@@ -522,15 +522,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2414434859455002710, guid: 7a2e1cc91bd32481d82a9f0af55d9c88, type: 3}
       propertyPath: m_Color.b
-      value: 0.8584906
+      value: 0.46226418
       objectReference: {fileID: 0}
     - target: {fileID: 2414434859455002710, guid: 7a2e1cc91bd32481d82a9f0af55d9c88, type: 3}
       propertyPath: m_Color.g
-      value: 0.7283437
+      value: 0.27399564
       objectReference: {fileID: 0}
     - target: {fileID: 2414434859455002710, guid: 7a2e1cc91bd32481d82a9f0af55d9c88, type: 3}
       propertyPath: m_Color.r
-      value: 0.54668033
+      value: 0.010902455
       objectReference: {fileID: 0}
     - target: {fileID: 4793237872026406104, guid: 7a2e1cc91bd32481d82a9f0af55d9c88, type: 3}
       propertyPath: m_LocalPosition.x
@@ -757,7 +757,7 @@ MonoBehaviour:
   - {fileID: 1375538143}
   portal: {fileID: 1963800475}
   star: {fileID: 7739249783103490991, guid: dcf0611159df14f6fb3d0deb5d46586c, type: 3}
-  level: 2
+  level: 5
 --- !u!114 &564155554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3400,6 +3400,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 564155557}
+  - {fileID: 1253268292}
   - {fileID: 1360527846}
   - {fileID: 241739354}
   - {fileID: 1639433481}
@@ -3407,5 +3408,4 @@ SceneRoots:
   - {fileID: 1421373922}
   - {fileID: 1963800474}
   - {fileID: 1024263915}
-  - {fileID: 1253268292}
   - {fileID: 937588948}
