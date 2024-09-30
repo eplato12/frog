@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf1602e2ebda4d559bb2f3d6eeeb11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lilyPadColliderWidth: 0.2
   frogSprites:
   - {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
   - {fileID: -7007856695457053032, guid: 4f39a1e2d78ed4fecb49608e26467192, type: 3}
@@ -142,14 +143,16 @@ MonoBehaviour:
   - {fileID: -4185735883379087729, guid: 6e5bac58bc53b4b5f989c41474469bd8, type: 3}
   - {fileID: -7007856695457053032, guid: 4f39a1e2d78ed4fecb49608e26467192, type: 3}
   - {fileID: -3036021857789892693, guid: efe7c4a894edb41c7b2b967cc5ee2811, type: 3}
-  frogJump: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
-  splash: {fileID: 8300000, guid: a8ff3d2c135aa4933ab10403f53087af, type: 3}
   rb: {fileID: 0}
-  firstLily: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 91d2f147a9f764fa891769c1edf98340, type: 3}
+  splashSound: {fileID: 8300000, guid: a8ff3d2c135aa4933ab10403f53087af, type: 3}
+  portalSound: {fileID: 8300000, guid: 8182e5368322b498dbd31ee223d6deb0, type: 3}
+  ribbitSound: {fileID: 8300000, guid: 6cafed42bfb9a4acc8e327fd94022529, type: 3}
   advanceScene: {fileID: -435661536521807678}
-  newSpeed: 2
   lilly: {fileID: 0}
-  lilyPadColliderWidth: 0.2
+  splashParticleSystem: {fileID: 0}
+  firstLily: {fileID: 0}
+  arrow: {fileID: 0}
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0
