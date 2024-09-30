@@ -19,4 +19,9 @@ public class lily : MonoBehaviour
         transform.Rotate(0, 0, rotationSpeed * rotate * Time.deltaTime);
     }
 
+    public void speedIncrease(float num)
+    {
+        rotationSpeed *= num;
+    }
+
 }
