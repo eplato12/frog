@@ -90,15 +90,8 @@ public class FrogScript : MonoBehaviour
     void Jump()
     {
         frogAnimator.SetBool("isJumping", true);
-        PlayAudio(jumpSound);
-        StartCoroutine(DelayedJump());
-    }
-
-    private IEnumerator DelayedJump()
-    {
-        yield return new WaitForSeconds(0.2f);
         transform.position += transform.up * jumpDistance;
-        IsLily(transform.position);
+        PlayAudio(jumpSound);
         StartCoroutine(HandleLanding());
     }
 
