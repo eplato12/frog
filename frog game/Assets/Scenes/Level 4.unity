@@ -2517,8 +2517,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285745417
-  m_fontColor: {r: 0.03631186, g: 0.2864834, b: 0.4528302, a: 1}
+    rgba: 4292453329
+  m_fontColor: {r: 0.81960785, g: 0.6392157, b: 0.8509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3428,9 +3428,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 278578358}
   - {fileID: 151260661}
+  - {fileID: 1987126324}
   - {fileID: 555040092}
   - {fileID: 512145256}
-  - {fileID: 1987126324}
   - {fileID: 1398383798}
   - {fileID: 1925248448}
   - {fileID: 2009383658}
