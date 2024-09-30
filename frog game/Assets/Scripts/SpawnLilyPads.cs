@@ -6,7 +6,7 @@ public class SpawnLilyPads : MonoBehaviour
 
    
 {
-    public GameObject evilLilies;
+    public GameObject[] evilLilies;
     public GameObject[] waterRings;
     public GameObject[] lillies;
     public int level;
@@ -32,7 +32,7 @@ public class SpawnLilyPads : MonoBehaviour
         }
         else if (level == 3)
         {
-            SpawnLevel3();
+            StartCoroutine(SpawnLevel3());
         }
         else if (level == 4)
         {
@@ -129,19 +129,25 @@ public class SpawnLilyPads : MonoBehaviour
 
                 if (lily != null)
                 {
-                    // instantiate that object 
+                   
                     lily = Instantiate(lillies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
 
-                    // set it as a child of the water rings to make it rotate 
+                    
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
 
                     yield return new WaitForSeconds(2f);
-                    GameObject evilLilySpawn = Instantiate(evilLilies, new Vector3(xPos, yPos, 1), Quaternion.identity);
-                    lily.GetComponent<Renderer>().enabled = false;
+                    float probEvil = Random.Range(0, 10);
+                    if (probEvil <= 10)
+                    {
+                        GameObject evilLily = Instantiate(evilLilies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
+                        evilLily.transform.parent = waterRings[i].transform;
+                        evilLily.transform.localScale = lilyScales[i];
+                        lily.GetComponent<Renderer>().enabled = false;
 
-                    yield return new WaitForSeconds(1f);
+                        yield return new WaitForSeconds(1f);
                         Destroy(lily);
+                    }
 
                 }
             }

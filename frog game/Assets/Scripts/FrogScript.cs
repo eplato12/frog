@@ -10,6 +10,8 @@ public class FrogScript : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject firstLily;
     public AdvanceScene advanceScene;
+    public float newSpeed = 2.0f;
+    public lily lilly;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
@@ -100,6 +102,14 @@ public class FrogScript : MonoBehaviour
                 isOnLily = true;
                 break;
             }
+            else if (collider.CompareTag("evilLily"))
+            {
+                transform.parent = collider.gameObject.transform;
+                transform.localPosition = Vector3.zero;
+                isOnLily = true;
+                SpeedUpLilies(); 
+                break;
+            }
         }
         if (!isOnLily)
         {
@@ -109,6 +119,16 @@ public class FrogScript : MonoBehaviour
 
         }
     }
+
+    private void SpeedUpLilies()
+    {
+        if (lilly != null)
+        {
+            lilly.speedIncrease(newSpeed);
+        }
+    }
+
+
 
     private void GoToDeathScene()
     {
