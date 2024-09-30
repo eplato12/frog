@@ -153,6 +153,8 @@ MonoBehaviour:
   splashParticleSystem: {fileID: 0}
   firstLily: {fileID: 0}
   arrow: {fileID: 0}
+  portal: {fileID: 0}
+  level: 0
 --- !u!82 &-4929996090955134628
 AudioSource:
   m_ObjectHideFlags: 0

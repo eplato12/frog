@@ -36,8 +36,6 @@ public class FrogScript : MonoBehaviour
     private float jumpDistance = 1f;
     private float newSpeed = 2.0f;
     private int starCounter = 0; // for level 5 portal activation
-    
-
 
     void Start()
     {
