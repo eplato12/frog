@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 638898832}
   - component: {fileID: 638898831}
   m_Layer: 0
-  m_Name: Firework
+  m_Name: Firework 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 813443663}
   - component: {fileID: 813443662}
   m_Layer: 0
-  m_Name: Firework_2
+  m_Name: Firework 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1483,9 +1483,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2127867765}
+  - {fileID: 331891304}
   - {fileID: 243338907}
-  - {fileID: 170374615}
-  - {fileID: 2124222641}
   - {fileID: 638898833}
   - {fileID: 813443664}
-  - {fileID: 331891304}
+  - {fileID: 170374615}
+  - {fileID: 2124222641}

@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 1776866853}
   - component: {fileID: 1776866852}
   m_Layer: 0
-  m_Name: waterAnimation1_0
+  m_Name: water animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 2125707351}
   - component: {fileID: 2125707354}
   m_Layer: 0
-  m_Name: Frogdead_0
+  m_Name: dead frog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,7 +1643,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 611657523}
+  - {fileID: 1482567240}
   - {fileID: 345164928}
   - {fileID: 2125707353}
   - {fileID: 1776866854}
-  - {fileID: 1482567240}

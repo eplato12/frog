@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 1987126322}
   - component: {fileID: 1987126321}
   m_Layer: 5
-  m_Name: Menu Canvas
+  m_Name: UI canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3637,11 +3637,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 278578358}
   - {fileID: 151260661}
-  - {fileID: 555040092}
-  - {fileID: 512145256}
   - {fileID: 1987126324}
+  - {fileID: 555040092}
+  - {fileID: 866121231}
+  - {fileID: 512145256}
+  - {fileID: 1808366983}
   - {fileID: 1398383798}
   - {fileID: 1925248448}
-  - {fileID: 1808366983}
-  - {fileID: 866121231}
   - {fileID: 663211193}
