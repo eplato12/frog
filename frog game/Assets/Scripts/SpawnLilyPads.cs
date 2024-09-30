@@ -11,13 +11,13 @@ public class SpawnLilyPads : MonoBehaviour
     public GameObject[] lillies;
     public int level;
     public GameObject portal;
+    public GameObject star;
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
             new Vector3((float)0.3328913, (float)0.328198, 1),
             new Vector3((float)0.3505113, (float)0.3406977, 1),
             new Vector3((float)0.4058551, (float)0.394492, 1)}; // array containing the local scales of each lily
-    private List<GameObject> spawnedLillies = new List<GameObject>(); // array to store the created lily pads 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -69,7 +69,8 @@ public class SpawnLilyPads : MonoBehaviour
 
     private void SpawnLevel2()
     {
-        // create a list to store the lily game objects to spawn stars on 
+        // create a list to store the lily game objects to spawn stars on
+        List<GameObject> spawnedLillies = new List<GameObject>();
 
         // get radius of each circle by position of first lillies
         float[] radii = {lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
@@ -106,11 +107,21 @@ public class SpawnLilyPads : MonoBehaviour
                 spawnedLillies.Add(lily);
             }
         }
+
+       
+        // randomly select lillies to spawn a star on
+        for (int i = 0; i < 2; i++)
+        {
+            // choose a lily to spawn a star on
+            GameObject starLily = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))]; ;
+
+            // spawn a star on that lily 
+            GameObject star1 = Instantiate(star, starLily.transform.position, Quaternion.identity);
+            star1.transform.parent = starLily.transform;
         
+        }
     }
-
     
-
     private IEnumerator SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
@@ -165,7 +176,7 @@ public class SpawnLilyPads : MonoBehaviour
     private void SpawnLevel4()
     {
         // this level will choose a location to spawn the portal at multiple times throughout the game
-        //List<GameObject> spawnedLillies = new List<GameObject>();
+        List<GameObject> spawnedLillies = new List<GameObject>();
 
         // get radius of each circle by position of first lillies
         float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
