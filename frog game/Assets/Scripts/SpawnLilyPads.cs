@@ -103,6 +103,8 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
+    
+
     private IEnumerator SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
@@ -143,7 +145,7 @@ public class SpawnLilyPads : MonoBehaviour
                         GameObject evilLily = Instantiate(evilLilies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
                         evilLily.transform.parent = waterRings[i].transform;
                         evilLily.transform.localScale = lilyScales[i];
-                        lily.GetComponent<Renderer>().enabled = false;
+                        lily.SetActive(false);
 
                         yield return new WaitForSeconds(1f);
                         Destroy(lily);
