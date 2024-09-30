@@ -10,13 +10,14 @@ public class FrogScript : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject firstLily;
     public AdvanceScene advanceScene;
-    public float newSpeed = 2.0f;
     public lily lilly;
+    public float lilyPadColliderWidth;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
     private Animator frogAnimator;
+    private float newSpeed = 2.0f;
 
 
     void Start()
@@ -90,7 +91,7 @@ public class FrogScript : MonoBehaviour
 
     private void IsLily(Vector2 gridPosition)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, lilyPadColliderWidth);
         bool isOnLily = false; // Flag to check if on a lily pad
 
         foreach (Collider2D collider in colliders)
