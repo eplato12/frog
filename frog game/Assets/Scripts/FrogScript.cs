@@ -12,8 +12,8 @@ public class FrogScript : MonoBehaviour
     public AdvanceScene advanceScene;
     public lily lilly;
     public float lilyPadColliderWidth;
-    public GameObject frogLegs;
     public GameObject arrow;
+    public ParticleSystem splashParticleSystem;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
@@ -116,20 +116,12 @@ public class FrogScript : MonoBehaviour
         }
         if (!isOnLily)
         {
-            StartCoroutine(FrogDead());
+            arrow.SetActive(false);
+            PlayAudio(splash);
+            Instantiate(splashParticleSystem, transform.position, Quaternion.identity);
+            frogSprite.enabled = false;
+            advanceScene.Invoke("ReloadScene", 0.5f);
         }
-    }
-
-    private IEnumerator FrogDead()
-    {
-        PlayAudio(splash);
-        arrow.SetActive(false);
-        frogSprite.enabled = false;
-
-        Instantiate(frogLegs, transform.position, Quaternion.identity);
-        
-        yield return new WaitForSeconds(0.5f);
-        advanceScene.Invoke("ReloadScene", 0.5f);
     }
 
 
