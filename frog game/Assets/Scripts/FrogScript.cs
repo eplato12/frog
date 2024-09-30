@@ -4,22 +4,33 @@ using UnityEngine.SceneManagement;
 
 public class FrogScript : MonoBehaviour
 {
+    public float lilyPadColliderWidth;
+
+    [Header("Sprite & Rigidbody")]
     public Sprite[] frogSprites;
-    public AudioClip frogJump;
-    public AudioClip splash;
     public Rigidbody2D rb;
-    public GameObject firstLily;
+
+    [Header("Audio Clips")]
+    public AudioClip jumpSound;
+    public AudioClip splashSound;
+    public AudioClip portalSound;
+    public AudioClip ribbitSound;
+
+    [Header("Other Scripts")]
     public AdvanceScene advanceScene;
     public lily lilly;
-    public float lilyPadColliderWidth;
-    public GameObject arrow;
     public ParticleSystem splashParticleSystem;
+
+    [Header("GameObjects")]
+    public GameObject firstLily;
+    public GameObject arrow;
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
     private float jumpDistance = 1f;
     private Animator frogAnimator;
     private float newSpeed = 2.0f;
+    private Coroutine randomSoundCoroutine;
 
 
     void Start()
@@ -31,6 +42,7 @@ public class FrogScript : MonoBehaviour
         frogSprite.enabled = true;
         transform.position = firstLily.transform.position;
         frogAnimator.SetBool("isJumping", false);
+        randomSoundCoroutine = StartCoroutine(PlaySoundRandomly(ribbitSound));
     }
 
     void Update()
@@ -45,11 +57,7 @@ public class FrogScript : MonoBehaviour
             Jump();
             if (IsPortal(transform.position))
             {
-                string nextScene = GetNextScene(SceneManager.GetActiveScene().name);
-                if (!string.IsNullOrEmpty(nextScene))
-                {
-                    advanceScene.toLevel(nextScene);
-                }
+                Invoke("HandlePortal", 1.0f);
             }
             else
             {
@@ -57,14 +65,32 @@ public class FrogScript : MonoBehaviour
             }
         }
 
+    }
 
+    private void HandlePortal()  
+    {
+        string nextScene = GetNextScene(SceneManager.GetActiveScene().name);
+        if (!string.IsNullOrEmpty(nextScene))
+        {
+            advanceScene.toLevel(nextScene);
+        }
+    }
+
+
+    private IEnumerator PlaySoundRandomly(AudioClip sound)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(5, 20));
+            PlayAudio(ribbitSound);
+        }
     }
 
     void Jump()
     {
         frogAnimator.SetBool("isJumping", true);
         transform.position += transform.up * jumpDistance;
-        PlayAudio(frogJump);
+        PlayAudio(jumpSound);
         StartCoroutine(HandleLanding());
     }
 
@@ -116,10 +142,9 @@ public class FrogScript : MonoBehaviour
         }
         if (!isOnLily)
         {
-            arrow.SetActive(false);
-            PlayAudio(splash);
+            HideFrogAndArrow();
+            PlayAudio(splashSound);
             Instantiate(splashParticleSystem, transform.position, Quaternion.identity);
-            frogSprite.enabled = false;
             advanceScene.Invoke("ReloadScene", 0.5f);
         }
     }
@@ -148,10 +173,18 @@ public class FrogScript : MonoBehaviour
         {
             if (collider.CompareTag("portal"))
             {
+                PlayAudio(portalSound);
+                HideFrogAndArrow();
                 return true;
             }
         }
         return false;
+    }
+
+    private void HideFrogAndArrow()
+    {
+        frogSprite.enabled = false;
+        arrow.SetActive(false);
     }
 
 }
