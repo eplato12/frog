@@ -110,11 +110,14 @@ public class SpawnLilyPads : MonoBehaviour
             }
         }
 
-        // randomly select lillies to spawn a star on
-        GameObject starLily1 = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))]; 
-        // spawn a star on that lily 
-        GameObject star1 = Instantiate(star, starLily1.transform.position, Quaternion.identity);
-        star1.transform.parent = starLily1.transform;
+        for (int k = 0; k < 2; k++)
+        {
+            // randomly select lillies to spawn a star on
+            GameObject starLily1 = spawnedLillies[(int)Mathf.Floor(Random.Range(0, spawnedLillies.Count - 1))];
+            // spawn a star on that lily 
+            GameObject star1 = Instantiate(star, starLily1.transform.position, Quaternion.identity);
+            star1.transform.parent = starLily1.transform;
+        }
     }
 
     private IEnumerator SpawnLevel3()

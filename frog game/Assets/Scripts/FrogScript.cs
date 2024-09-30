@@ -132,6 +132,10 @@ public class FrogScript : MonoBehaviour
                 isOnLily = true;
                 break;
             }
+            if (collider.CompareTag("star"))
+            {
+                collider.gameObject.SetActive(false);
+            }
             else if (collider.CompareTag("evilLily"))
             {
                 transform.parent = collider.gameObject.transform;

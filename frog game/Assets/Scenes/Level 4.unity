@@ -544,7 +544,7 @@ MonoBehaviour:
   - {fileID: 1969084340}
   level: 4
   portal: {fileID: 4682719487842418414, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
-  star: {fileID: 0}
+  star: {fileID: 7739249783103490991, guid: dcf0611159df14f6fb3d0deb5d46586c, type: 3}
 --- !u!1001 &292092059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2875,7 +2875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 149.99997, y: 40.000027}
+  m_AnchoredPosition: {x: 149.99997, y: 40.00003}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930035031

@@ -1267,7 +1267,7 @@ MonoBehaviour:
   - {fileID: 382064188}
   level: 2
   portal: {fileID: 0}
-  star: {fileID: 0}
+  star: {fileID: 7739249783103490991, guid: dcf0611159df14f6fb3d0deb5d46586c, type: 3}
 --- !u!114 &586938565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,6 +1646,10 @@ PrefabInstance:
       propertyPath: advanceScene
       value: 
       objectReference: {fileID: 234014025}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: splashParticleSystem
+      value: 
+      objectReference: {fileID: 7333587039017435305, guid: d421c0264eb304edab6ef2acdc055e66, type: 3}
     - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: 'frogSprites.Array.data[0]'
       value: 
@@ -3864,12 +3868,12 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 586938568}
   - {fileID: 815544151}
   - {fileID: 234014026}
   - {fileID: 599976473}
   - {fileID: 772808345}
   - {fileID: 212979414}
-  - {fileID: 586938568}
   - {fileID: 2034127721}
   - {fileID: 1136632421}
   - {fileID: 1178412417}

@@ -3401,6 +3401,7 @@ MonoBehaviour:
   - {fileID: 194153418}
   level: 1
   portal: {fileID: 0}
+  star: {fileID: 7739249783103490991, guid: dcf0611159df14f6fb3d0deb5d46586c, type: 3}
 --- !u!114 &1919094776
 MonoBehaviour:
   m_ObjectHideFlags: 0
