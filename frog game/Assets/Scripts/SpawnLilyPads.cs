@@ -6,12 +6,17 @@ public class SpawnLilyPads : MonoBehaviour
 
    
 {
+    [Header("Lilypad Objects")]
     public GameObject[] evilLilies;
     public GameObject[] waterRings;
     public GameObject[] lillies;
-    public int level;
+
+    [Header("Other Objects")]
     public GameObject portal;
     public GameObject star;
+
+    [Header("Level Indicator")]
+    public int level;
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
@@ -29,6 +34,7 @@ public class SpawnLilyPads : MonoBehaviour
         }
         else if (level == 2)
         {
+            portal.SetActive(false);
             SpawnLevel2();
         }
         else if (level == 3)
@@ -110,6 +116,7 @@ public class SpawnLilyPads : MonoBehaviour
             }
         }
 
+        // spawn stars 
         for (int k = 0; k < 2; k++)
         {
             // randomly select lillies to spawn a star on
