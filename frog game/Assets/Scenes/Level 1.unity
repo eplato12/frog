@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &335743081
 Transform:
   m_ObjectHideFlags: 0
@@ -454,11 +454,11 @@ Transform:
   m_GameObject: {fileID: 335743080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.320049, y: 1.7838695, z: 2263.6174}
+  m_LocalPosition: {x: 3.320049, y: 1.7838695, z: 2253.6174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1919094779}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &335743082
 AudioSource:
@@ -3404,8 +3404,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 335743081}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1941407639
@@ -4144,3 +4143,4 @@ SceneRoots:
   - {fileID: 664502214}
   - {fileID: 812075984}
   - {fileID: 1941407639}
+  - {fileID: 335743081}
