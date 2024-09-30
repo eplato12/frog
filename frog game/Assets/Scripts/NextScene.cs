@@ -49,6 +49,7 @@ public class AdvanceScene : MonoBehaviour
     public void toLevelMenu()
     {
         SceneManager.LoadScene("Level Menu");
+        Time.timeScale = 1;
     }
 
     public void pause()
