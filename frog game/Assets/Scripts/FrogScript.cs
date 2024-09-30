@@ -124,7 +124,8 @@ public class FrogScript : MonoBehaviour
             case "Level 1": return "Level 2";
             case "Level 2": return "Level 3";
             case "Level 3": return "Level 4";
-            case "Level 4": return "Win";
+            case "Level 4": return "Level 5";
+            case "Level 5": return "Win";
             default: return null;
         }
     }
