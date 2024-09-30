@@ -9,6 +9,14 @@ public class AdvanceScene : MonoBehaviour
     private static string lastSceneName;
 
 
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Frog Die" && Input.GetKeyDown(KeyCode.Space))
+        {
+            LoadLastScene();
+        }
+    }
+
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

@@ -27,10 +27,11 @@ public class FrogScript : MonoBehaviour
 
     private AudioSource frogAudio;
     private SpriteRenderer frogSprite;
-    private float jumpDistance = 1f;
     private Animator frogAnimator;
-    private float newSpeed = 2.0f;
     private Coroutine randomSoundCoroutine;
+    private float jumpDistance = 1f;
+    private float newSpeed = 2.0f;
+    
 
 
     void Start()
@@ -89,8 +90,15 @@ public class FrogScript : MonoBehaviour
     void Jump()
     {
         frogAnimator.SetBool("isJumping", true);
-        transform.position += transform.up * jumpDistance;
         PlayAudio(jumpSound);
+        StartCoroutine(DelayedJump());
+    }
+
+    private IEnumerator DelayedJump()
+    {
+        yield return new WaitForSeconds(0.2f);
+        transform.position += transform.up * jumpDistance;
+        IsLily(transform.position);
         StartCoroutine(HandleLanding());
     }
 
@@ -160,7 +168,6 @@ public class FrogScript : MonoBehaviour
 
 
     public void GoToDeathScene()
-
     {
         advanceScene.toLevel("Frog Die");
     }
