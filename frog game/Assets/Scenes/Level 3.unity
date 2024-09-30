@@ -3186,6 +3186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal particle system
       objectReference: {fileID: 0}
+    - target: {fileID: 4613287132209522, guid: 21b1df1fa77d847bdb6b1987d721accb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869681190213512617, guid: 21b1df1fa77d847bdb6b1987d721accb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
