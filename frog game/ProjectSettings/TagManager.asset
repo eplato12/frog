@@ -10,6 +10,7 @@ TagManager:
   - lily
   - portal
   - evilLily
+  - star
   layers:
   - Default
   - TransparentFX
