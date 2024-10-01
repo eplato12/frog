@@ -374,6 +374,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -444,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &335743081
 Transform:
   m_ObjectHideFlags: 0
@@ -470,8 +478,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b0fa3dc6f89443849253d641f261092, type: 3}
-  m_Resource: {fileID: 8300000, guid: 4b0fa3dc6f89443849253d641f261092, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 585656697104444cb996ecf25c05a808, type: 3}
+  m_Resource: {fileID: 8300000, guid: 585656697104444cb996ecf25c05a808, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -910,6 +918,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2245,7 +2261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243.25998, y: 145.14}
+  m_AnchoredPosition: {x: -243.26001, y: 145.14}
   m_SizeDelta: {x: -486.51, y: -290.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331347650
@@ -3670,6 +3686,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
