@@ -652,7 +652,6 @@ GameObject:
   - component: {fileID: 355743735}
   - component: {fileID: 355743738}
   - component: {fileID: 355743737}
-  - component: {fileID: 355743736}
   m_Layer: 5
   m_Name: Tutorial - timer
   m_TagString: Untagged
@@ -680,20 +679,6 @@ RectTransform:
   m_AnchoredPosition: {x: 324.11, y: 57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &355743736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355743734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09d260aba40a41cca0ef357763e516b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIelement: {fileID: 355743734}
-  trigger: 0
 --- !u!114 &355743737
 MonoBehaviour:
   m_ObjectHideFlags: 0

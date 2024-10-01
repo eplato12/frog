@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class tutorialscript : MonoBehaviour
 {
-    public GameObject UIelement;
+    public GameObject UIElement;
     public KeyCode trigger;
     private static bool _hasInitialized = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,12 +16,7 @@ public class tutorialscript : MonoBehaviour
     {
         if (Input.GetKeyDown(trigger))
         {
-            Destroy(UIelement);
-            _hasInitialized = true;
-        }
-
-        if (trigger == KeyCode.None)
-        {
+            Destroy(UIElement);
             _hasInitialized = true;
         }
     }
@@ -30,7 +25,7 @@ public class tutorialscript : MonoBehaviour
     {
         if (_hasInitialized)
         {
-            UIelement.SetActive(false);
+            UIElement.SetActive(false);
         }
     }
 }

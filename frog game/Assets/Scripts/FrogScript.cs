@@ -61,13 +61,14 @@ public class FrogScript : MonoBehaviour
             firstLily.SetActive(false);
         }
 
+        if (starCounter == 2)
+        {
+            portal.SetActive(true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
-            if (starCounter == 2)
-            {
-                portal.SetActive(true);
-            }
 
             if (IsPortal(transform.position))
             {
