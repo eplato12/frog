@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class lily : MonoBehaviour
@@ -6,7 +7,7 @@ public class lily : MonoBehaviour
     public Sprite niceLily;
     private SpriteRenderer spriteRenderer;
 
-    public float rotationSpeed = 30f;
+    public float rotationSpeed = 90f;
     private int rotate;
     private bool isEvil = false;
 
@@ -27,14 +28,29 @@ public class lily : MonoBehaviour
         rotationSpeed *= num;
     }
 
-    public void SetIsEvil(bool evilState)
+    public void SetIsEvil(bool evil)
     {
-        isEvil = evilState;
+        isEvil = evil;
         UpdateSprite(); 
+    }
+
+    public void increaseBy(float x)
+    {
+        rotationSpeed *= x;
     }
 
     void UpdateSprite()
     {
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        if (spriteRenderer == null)
+        {
+            return;
+        }
+
         if (isEvil)
         {
             spriteRenderer.sprite = evilLily;
@@ -44,5 +60,25 @@ public class lily : MonoBehaviour
             spriteRenderer.sprite = niceLily;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+        if (other.CompareTag("Player") && isEvil)
+        {
+            StartCoroutine(IncreaseRotationSpeedForSeconds(2f));
+        }
+    }
+
+    private IEnumerator IncreaseRotationSpeedForSeconds(float speedMultiplier)
+    {
+        float originalSpeed = rotationSpeed;
+        rotationSpeed *= speedMultiplier;
+
+        yield return new WaitForSeconds(5f); 
+
+        rotationSpeed = originalSpeed; 
+    }
+
 }
 

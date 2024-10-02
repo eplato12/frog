@@ -384,6 +384,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -8836224742204046172, guid: a238b9974fcad41edbb844d38ba8b845, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -912,6 +920,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -8836224742204046172, guid: a238b9974fcad41edbb844d38ba8b845, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1131,8 +1147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0bd47ae929b4828a703fcb7c393aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  evilLilies:
-  - {fileID: 0}
   waterRings:
   - {fileID: 1136632427}
   - {fileID: 1136632425}
@@ -1143,7 +1157,7 @@ MonoBehaviour:
   - {fileID: 382064188}
   portal: {fileID: 0}
   star: {fileID: 7739249783103490991, guid: dcf0611159df14f6fb3d0deb5d46586c, type: 3}
-  level: 2
+  level: 3
 --- !u!114 &586938565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,6 +1523,10 @@ PrefabInstance:
     - target: {fileID: 3249720705030152005, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_Name
       value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249720705030152005, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: arrow
@@ -3110,6 +3128,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lily
       objectReference: {fileID: 0}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: evilLily
+      value: 
+      objectReference: {fileID: -8836224742204046172, guid: a238b9974fcad41edbb844d38ba8b845, type: 3}
+    - target: {fileID: 8143573570378882459, guid: 27717740063e3402ba5cccb8986b3c7b, type: 3}
+      propertyPath: niceLily
+      value: 
+      objectReference: {fileID: -3469229363434752836, guid: 5456e052a2fef458ba664a57eab09925, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -7,7 +7,6 @@ public class SpawnLilyPads : MonoBehaviour
    
 {
     [Header("Lilypad Objects")]
-    public GameObject[] evilLilies;
     public GameObject[] waterRings;
     public GameObject[] lillies;
 
@@ -17,6 +16,9 @@ public class SpawnLilyPads : MonoBehaviour
 
     [Header("Level Indicator")]
     public int level;
+
+    private lily lilies;
+
 
     private int[] numLillies = {20, 14, 7}; // array containing number of lillies for each water ring
     private Vector3[] lilyScales = {
@@ -38,7 +40,7 @@ public class SpawnLilyPads : MonoBehaviour
         }
         else if (level == 3)
         {
-            StartCoroutine(SpawnLevel3());
+            SpawnLevel3();
         }
         else if (level == 4)
         {
@@ -113,7 +115,7 @@ public class SpawnLilyPads : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnLevel3()
+    private void SpawnLevel3()
     {
         // get radius of each circle by position of first lillies
         float[] radii = { lillies[0].transform.position.x, lillies[1].transform.position.x, lillies[2].transform.position.x };
@@ -136,30 +138,22 @@ public class SpawnLilyPads : MonoBehaviour
                 {
                     lily = lillies[i];
                 }
-
                 if (lily != null)
                 {
-                   
+                    // instantiate that object 
                     lily = Instantiate(lillies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
 
-                    
+                    // set it as a child of the water rings to make it rotate 
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
 
-                    yield return new WaitForSeconds(2f);
-                    float probEvil = Random.Range(0, 10);
-                    if (probEvil <= 10)
-                    {
-                        GameObject evilLily = Instantiate(evilLilies[i], new Vector3(xPos, yPos, 1), Quaternion.identity);
-                        evilLily.transform.parent = waterRings[i].transform;
-                        evilLily.transform.localScale = lilyScales[i];
-                        lily.SetActive(false);
+                    lilies = lily.GetComponent<lily>();
 
-                        yield return new WaitForSeconds(1f);
-                        Destroy(lily);
-                    }
+                    bool isEvil = Random.Range(0, 10) < 6;
 
+                    lilies.SetIsEvil(isEvil);
                 }
+
             }
         }
     }
