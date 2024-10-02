@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09d260aba40a41cca0ef357763e516b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIelement: {fileID: 421995713}
+  UIElement: {fileID: 421995713}
   trigger: 32
 --- !u!114 &421995716
 MonoBehaviour:
@@ -2912,7 +2912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09d260aba40a41cca0ef357763e516b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIelement: {fileID: 1498430776}
+  UIElement: {fileID: 1498430776}
   trigger: 32
 --- !u!4 &1556326682 stripped
 Transform:
