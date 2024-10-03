@@ -6,6 +6,7 @@ public class AdvanceScene : MonoBehaviour
 {
     public GameObject exitPanel;
     public GameObject playButton;
+    public GameObject[] UIelements;
     private static string lastSceneName;
 
 
@@ -34,6 +35,10 @@ public class AdvanceScene : MonoBehaviour
         {
             exitPanel.SetActive(true);
             Time.timeScale = 0;
+            foreach (GameObject element in UIelements)
+            {
+                element.SetActive(false);
+            }
         }
     }
 
@@ -43,6 +48,10 @@ public class AdvanceScene : MonoBehaviour
         {
             exitPanel.SetActive(false);
             Time.timeScale = 1;
+            foreach (GameObject element in UIelements)
+            {
+                element.SetActive(true);
+            }
         }
     }
 

@@ -1579,7 +1579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243.25998, y: 145.14}
+  m_AnchoredPosition: {x: -243.26001, y: 145.14}
   m_SizeDelta: {x: -486.51, y: -290.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691473943
@@ -1727,23 +1727,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3338
+      value: 0.43559718
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3338
+      value: 0.43559718
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3338
+      value: 0.43559718
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0187
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0116
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3334,6 +3334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 1070455288}
   playButton: {fileID: 978772594}
+  UIelements:
+  - {fileID: 355743734}
+  - {fileID: 1103184836}
 --- !u!4 &1925248448
 Transform:
   m_ObjectHideFlags: 0
