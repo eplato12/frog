@@ -877,6 +877,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 121940388}
     - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: portal
+      value: 
+      objectReference: {fileID: 4682719487842418414, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
+    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: frogLegs
       value: 
       objectReference: {fileID: 6569817203984621891, guid: b00486209a90d443da75cebe9bafacad, type: 3}
