@@ -17,7 +17,7 @@ public class SpawnLilyPads : MonoBehaviour
     [Header("Level Indicator")]
     public int level;
 
-    private lily lilies;
+    private lily Lily;
 
 
     private int[] numLillies = { 20, 14, 7 }; // array containing number of lillies for each water ring
@@ -147,11 +147,11 @@ public class SpawnLilyPads : MonoBehaviour
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
 
-                    lilies = lily.GetComponent<lily>();
+                    Lily = lily.GetComponent<lily>();
 
-                    bool isEvil = Random.Range(0, 10) < 6;
+                    bool isEvil = Random.Range(0, 10) < 3;
 
-                    lilies.SetIsEvil(isEvil);
+                    Lily.SetIsEvil(isEvil);
                 }
 
             }
@@ -183,11 +183,11 @@ public class SpawnLilyPads : MonoBehaviour
                 lily.transform.parent = waterRings[i].transform;
                 lily.transform.localScale = lilyScales[i];
 
-                lilies = lily.GetComponent<lily>();
+                Lily = lily.GetComponent<lily>();
 
                 bool isEvil = Random.Range(0, 10) < 6;
 
-                lilies.SetIsEvil(isEvil);
+                Lily.SetIsEvil(isEvil);
 
                 // add lily to array to access later
                 spawnedLillies.Add(lily);
@@ -261,6 +261,12 @@ public class SpawnLilyPads : MonoBehaviour
                     // set it as a child of the water rings to make it rotate 
                     lily.transform.parent = waterRings[i].transform;
                     lily.transform.localScale = lilyScales[i];
+
+                    Lily = lily.GetComponent<lily>();
+
+                    bool isEvil = Random.Range(0, 10) < 3;
+
+                    Lily.SetIsEvil(isEvil);
 
                     spawnedLillies.Add(lily);
                 }
