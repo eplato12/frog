@@ -66,18 +66,28 @@ public class lily : MonoBehaviour
 
         if (other.CompareTag("Player") && isEvil)
         {
-            StartCoroutine(IncreaseRotationSpeedForSeconds(3f));
+            StartCoroutine(IncreaseRotationSpeedForSeconds(10f));
         }
     }
 
     private IEnumerator IncreaseRotationSpeedForSeconds(float speedMultiplier)
     {
-        float originalSpeed = rotationSpeed;
-        rotationSpeed *= speedMultiplier;
+        float targetSpeed = rotationSpeed;
+        float currentSpeed=rotationSpeed * speedMultiplier;
+        float lerpTime=5;
+        float elapsedTime=0;
 
-        yield return new WaitForSeconds(10f);
+        while (elapsedTime < lerpTime)
+        {
+            rotationSpeed = Mathf.Lerp(currentSpeed, targetSpeed, elapsedTime / lerpTime);
+            elapsedTime += Time.deltaTime;
 
-        rotationSpeed = originalSpeed;
+
+            yield return null;
+
+        }
+        rotationSpeed = targetSpeed;
+        yield return null;
     }
 
 }

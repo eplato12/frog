@@ -191,6 +191,8 @@ public class SpawnLilyPads : MonoBehaviour
 
                 // add lily to array to access later
                 spawnedLillies.Add(lily);
+
+                
             }
         }
 
