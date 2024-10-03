@@ -80,11 +80,8 @@ public class FrogScript : MonoBehaviour
 
     private void HandlePortal()  
     {
-        string nextScene = GetNextScene(SceneManager.GetActiveScene().name);
-        if (!string.IsNullOrEmpty(nextScene))
-        {
-            advanceScene.toLevel(nextScene);
-        }
+        SceneTransitionInfo.NextSceneName = GetNextScene(SceneManager.GetActiveScene().name);
+        advanceScene.toLevel("LoadingScene");
     }
 
 

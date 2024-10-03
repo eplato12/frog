@@ -16,6 +16,11 @@ public class AdvanceScene : MonoBehaviour
         {
             LoadLastScene();
         }
+        if (SceneManager.GetActiveScene().name == "Frog Die")
+        {
+
+            LoadLastScene();
+        }
     }
 
     public void ReloadScene()
