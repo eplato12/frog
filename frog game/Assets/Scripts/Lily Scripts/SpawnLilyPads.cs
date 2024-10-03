@@ -183,6 +183,12 @@ public class SpawnLilyPads : MonoBehaviour
                 lily.transform.parent = waterRings[i].transform;
                 lily.transform.localScale = lilyScales[i];
 
+                lilies = lily.GetComponent<lily>();
+
+                bool isEvil = Random.Range(0, 10) < 6;
+
+                lilies.SetIsEvil(isEvil);
+
                 // add lily to array to access later
                 spawnedLillies.Add(lily);
             }

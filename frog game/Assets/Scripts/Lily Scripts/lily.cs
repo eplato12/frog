@@ -75,7 +75,7 @@ public class lily : MonoBehaviour
         float originalSpeed = rotationSpeed;
         rotationSpeed *= speedMultiplier;
 
-        yield return new WaitForSeconds(5f); 
+        yield return new WaitForSeconds(10f); 
 
         rotationSpeed = originalSpeed; 
     }
