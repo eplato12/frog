@@ -6,10 +6,6 @@ public class FrogScript : MonoBehaviour
 {
     public float lilyPadColliderWidth;
 
-    [Header("Sprite & Rigidbody")]
-    public Sprite[] frogSprites;
-    public Rigidbody2D rb;
-
     [Header("Audio Clips")]
     public AudioClip jumpSound;
     public AudioClip splashSound;
@@ -41,7 +37,6 @@ public class FrogScript : MonoBehaviour
     {
         frogSprite = GetComponent<SpriteRenderer>();
         frogAudio = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody2D>();
         frogAnimator = GetComponent<Animator>();
         frogSprite.enabled = true;
         transform.position = firstLily.transform.position;
@@ -189,7 +184,7 @@ public class FrogScript : MonoBehaviour
 
     private bool IsPortal(Vector2 gridPosition)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.1f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.2f);
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("portal"))

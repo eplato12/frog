@@ -2954,6 +2954,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 1070455288}
   playButton: {fileID: 978772594}
+  UIelements:
+  - {fileID: 1468053959}
+  - {fileID: 1930035029}
 --- !u!4 &1925248448
 Transform:
   m_ObjectHideFlags: 0
