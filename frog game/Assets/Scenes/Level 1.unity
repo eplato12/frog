@@ -320,10 +320,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog
       objectReference: {fileID: 0}
-    - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 822187017}
     - target: {fileID: 8248487544222226942, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -426,11 +422,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3378654635738966739, guid: 2d7b8512a18c848c6872d60b2c072ebd, type: 3}
   m_PrefabInstance: {fileID: 3837069237117151491}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &822187017 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7449770259442871832, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
-  m_PrefabInstance: {fileID: 544747523}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1021814844 stripped
 Transform:
