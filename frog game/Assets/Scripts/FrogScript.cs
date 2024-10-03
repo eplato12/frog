@@ -78,6 +78,7 @@ public class FrogScript : MonoBehaviour
             else
             {
                 IsLily(transform.position);
+                IsStar();
             }
         } 
 
@@ -148,11 +149,7 @@ public class FrogScript : MonoBehaviour
                 isOnLily = true;
                 break;
             }
-            if (collider.CompareTag("star"))
-            {
-                collider.gameObject.SetActive(false);
-                starCounter++;
-            }
+   
             else if (collider.CompareTag("evilLily"))
             {
                 transform.parent = collider.gameObject.transform;
@@ -170,6 +167,23 @@ public class FrogScript : MonoBehaviour
             advanceScene.Invoke("ReloadScene", 0.5f);
         }
     }
+
+    private void IsStar()
+    {
+        if (transform.parent.childCount > 1)
+        {
+            for (int i = 0; i < transform.parent.transform.childCount; i++)
+            {
+                GameObject lilyChild = transform.parent.transform.GetChild(i).gameObject;
+                if (lilyChild.CompareTag("star"))
+                {
+                    Destroy(lilyChild);
+                    starCounter++;
+                }
+            }
+        }
+    }
+
 
 
     private void SpeedUpLilies()
