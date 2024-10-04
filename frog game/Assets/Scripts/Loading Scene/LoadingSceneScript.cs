@@ -1,7 +1,9 @@
 using UnityEngine;
 
+
 public class LoadingSceneScript : MonoBehaviour
 {
+
     public AdvanceScene advanceScene;
 
     void Start()
@@ -9,7 +11,7 @@ public class LoadingSceneScript : MonoBehaviour
         Invoke("ToNextLevel", 3.0f);
     }
 
-    public void ToNextLevel()
+    private void ToNextLevel()
     {
         string nextScene = SceneTransitionInfo.NextSceneName;
         if (!string.IsNullOrEmpty(nextScene))

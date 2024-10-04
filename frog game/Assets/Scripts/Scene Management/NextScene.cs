@@ -2,8 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+
 public class AdvanceScene : MonoBehaviour
 {
+
     public GameObject exitPanel;
     public GameObject playButton;
     public GameObject[] UIelements;
@@ -14,11 +16,6 @@ public class AdvanceScene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Frog Die" && Input.GetKeyDown(KeyCode.Space))
         {
-            LoadLastScene();
-        }
-        if (SceneManager.GetActiveScene().name == "Frog Die")
-        {
-
             LoadLastScene();
         }
     }
@@ -86,7 +83,7 @@ public class AdvanceScene : MonoBehaviour
 
     public void toLevel(string name)
     {
-        lastSceneName = SceneManager.GetActiveScene().name; // Store the current scene before changing
+        lastSceneName = SceneManager.GetActiveScene().name;  
         SceneManager.LoadScene(name);
     }
 

@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
+
 public class LoadingDots : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro; 
@@ -16,14 +17,15 @@ public class LoadingDots : MonoBehaviour
     {
         while (true) 
         {
-            textMeshPro.text = "Loading.";
+            textMeshPro.text = "Loading Next Level.";
             yield return new WaitForSeconds(dotAnimationDelay);
 
-            textMeshPro.text = "Loading..";
+            textMeshPro.text = "Loading Next Level..";
             yield return new WaitForSeconds(dotAnimationDelay);
 
-            textMeshPro.text = "Loading...";
+            textMeshPro.text = "Loading Next Level...";
             yield return new WaitForSeconds(dotAnimationDelay);
         }
     }
+
 }

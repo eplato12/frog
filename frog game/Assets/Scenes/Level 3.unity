@@ -708,7 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitPanel: {fileID: 955518150}
   playButton: {fileID: 348858734}
-  UIelements: []
+  UIelements:
+  - {fileID: 43513558}
+  - {fileID: 1857149640}
 --- !u!4 &234014026
 Transform:
   m_ObjectHideFlags: 0
@@ -965,7 +967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243.25998, y: 145.14}
+  m_AnchoredPosition: {x: -243.25995, y: 145.14}
   m_SizeDelta: {x: -486.51, y: -290.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360216863
@@ -1526,7 +1528,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 01a81219854a145eb8eea0123a48391e, type: 3}
   m_Resource: {fileID: 8300000, guid: 01a81219854a145eb8eea0123a48391e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.328
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3399,7 +3401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 150.19266, y: 39.969193}
+  m_AnchoredPosition: {x: 150.19266, y: 39.969177}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857149642

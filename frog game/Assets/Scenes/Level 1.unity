@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38568, g: 0.6021547, b: 0.764151, a: 1}
+  m_Color: {r: 0.8117647, g: 0.8156863, b: 0.45490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -481,7 +481,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a885240675d4145cbb1880a4df2a4961, type: 3}
   m_Resource: {fileID: 8300000, guid: a885240675d4145cbb1880a4df2a4961, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.255
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285745417
-  m_fontColor: {r: 0.03631186, g: 0.2864834, b: 0.4528302, a: 1}
+    rgba: 4285845968
+  m_fontColor: {r: 0.8156863, g: 0.81960785, b: 0.45490196, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38568, g: 0.6021547, b: 0.764151, a: 1}
+  m_Color: {r: 0.8156863, g: 0.81960785, b: 0.45490196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2214,7 +2214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -243.26004, y: 145.14}
+  m_AnchoredPosition: {x: -243.26001, y: 145.14}
   m_SizeDelta: {x: -486.51, y: -290.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331347650
@@ -2825,7 +2825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: press space to jump!
+  m_text: press space to jump to the portal!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
   m_sharedMaterial: {fileID: -7498497617447309216, guid: dbf81729236024b62aff9fe4917e0f1a, type: 2}
@@ -2834,8 +2834,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285745417
-  m_fontColor: {r: 0.03631186, g: 0.2864834, b: 0.4528302, a: 1}
+    rgba: 4285845968
+  m_fontColor: {r: 0.81436265, g: 0.8207547, b: 0.45296368, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
 public class FrogScript : MonoBehaviour
 {
+
     public float lilyPadColliderWidth;
 
     [Header("Audio Clips")]
@@ -78,29 +80,45 @@ public class FrogScript : MonoBehaviour
 
     }
 
-    private void HandlePortal()  
+    public void GoToDeathScene()
     {
-        SceneTransitionInfo.NextSceneName = GetNextScene(SceneManager.GetActiveScene().name);
-        advanceScene.toLevel("LoadingScene");
+        advanceScene.toLevel("Frog Die"); // Invoked in Timer script.
     }
 
-
-    private IEnumerator PlaySoundRandomly(AudioClip sound)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(5, 20));
-            PlayAudio(ribbitSound);
-        }
-    }
-
-    void Jump()
+    private void Jump()
     {
         frogAnimator.SetBool("isJumping", true);
         transform.position += transform.up * jumpDistance;
         PlayAudio(jumpSound);
         StartCoroutine(HandleLanding());
     }
+
+    private bool IsPortal(Vector2 gridPosition)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.2f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("portal"))
+            {
+                PlayAudio(portalSound);
+                HideFrogAndArrow();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void HideFrogAndArrow()
+    {
+        frogSprite.enabled = false;
+        arrow.SetActive(false);
+    }
+
+    private void HandlePortal()  
+    {
+        SceneTransitionInfo.NextSceneName = GetNextScene(SceneManager.GetActiveScene().name);
+        advanceScene.toLevel("LoadingScene"); // Refer to LoadingSceneScript to continue logic.
+    }  
 
     private IEnumerator HandleLanding()
     {
@@ -119,11 +137,6 @@ public class FrogScript : MonoBehaviour
             case "Level 5": return "Win";
             default: return null;
         }
-    }
-
-    private void PlayAudio(AudioClip clip)
-    {
-        frogAudio.PlayOneShot(clip);
     }
 
     private void IsLily(Vector2 gridPosition)
@@ -163,7 +176,6 @@ public class FrogScript : MonoBehaviour
         }
     }
 
-
     private void SpeedUpLilies()
     {
         if (lilly != null)
@@ -172,32 +184,18 @@ public class FrogScript : MonoBehaviour
         }
     }
 
-
-    public void GoToDeathScene()
+    private void PlayAudio(AudioClip clip)
     {
-        advanceScene.toLevel("Frog Die");
+        frogAudio.PlayOneShot(clip);
     }
 
-
-    private bool IsPortal(Vector2 gridPosition)
+    private IEnumerator PlaySoundRandomly(AudioClip sound)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, 0.2f);
-        foreach (Collider2D collider in colliders)
+        while (true)
         {
-            if (collider.CompareTag("portal"))
-            {
-                PlayAudio(portalSound);
-                HideFrogAndArrow();
-                return true;
-            }
+            yield return new WaitForSeconds(Random.Range(5, 20));
+            PlayAudio(ribbitSound);
         }
-        return false;
-    }
-
-    private void HideFrogAndArrow()
-    {
-        frogSprite.enabled = false;
-        arrow.SetActive(false);
     }
 
 }

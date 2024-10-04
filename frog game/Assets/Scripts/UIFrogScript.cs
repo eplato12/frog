@@ -1,14 +1,16 @@
 using UnityEngine;
 
+
 public class UIFrogScript : MonoBehaviour
 {
-    public float leftBoundary = -12f; // Adjust to your left limit
-    public float rightBoundary = 12f; // Adjust to your right limit
-    public float jumpDistance = 2f; // Distance of each jump
-    private float moveDirection = 1f; // Direction of movement (1 = right, -1 = left)
+
+    private float leftBoundary = -12f;  
+    private float rightBoundary = 12f;  
+    private float jumpDistance = 2f;  
+    private float moveDirection = 1f;  
     private SpriteRenderer frogSR;
-    public float jumpInterval = 1f; // Time interval between jumps
-    private float jumpTimer; // Timer to track time between jumps
+    private float jumpInterval = 1f;  
+    private float jumpTimer;  
 
     void Start()
     {
@@ -47,4 +49,5 @@ public class UIFrogScript : MonoBehaviour
     {
         frogSR.flipX = !frogSR.flipX;
     }
+
 }

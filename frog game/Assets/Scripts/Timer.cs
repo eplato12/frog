@@ -1,8 +1,6 @@
-using System.Collections;
-using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
+
 
 public class Timer : MonoBehaviour
 {
@@ -13,8 +11,6 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-
-        // Your existing code
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
