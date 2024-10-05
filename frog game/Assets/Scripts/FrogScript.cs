@@ -82,7 +82,7 @@ public class FrogScript : MonoBehaviour
 
     public void GoToDeathScene()
     {
-        advanceScene.toLevel("Frog Die"); // Invoked in Timer script.
+        advanceScene.toLevel("Frog Die"); 
     }
 
     private void Jump()
@@ -117,7 +117,7 @@ public class FrogScript : MonoBehaviour
     private void HandlePortal()  
     {
         SceneTransitionInfo.NextSceneName = GetNextScene(SceneManager.GetActiveScene().name);
-        advanceScene.toLevel("LoadingScene"); // Refer to LoadingSceneScript to continue logic.
+        advanceScene.toLevel("LoadingScene"); 
     }  
 
     private IEnumerator HandleLanding()
@@ -142,7 +142,7 @@ public class FrogScript : MonoBehaviour
     private void IsLily(Vector2 gridPosition)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(gridPosition, lilyPadColliderWidth);
-        bool isOnLily = false; // Flag to check if on a lily pad
+        bool isOnLily = false; 
 
         foreach (Collider2D collider in colliders)
         {

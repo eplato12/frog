@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog
       objectReference: {fileID: 0}
+    - target: {fileID: 3249720705030152005, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3462809982385347042, guid: b0d935662e1a04ebcaad5658872cffac, type: 3}
       propertyPath: arrow
       value: 
@@ -1545,7 +1549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1024263914
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3425,6 +3429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1059098466982879559, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.46
@@ -3455,15 +3463,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3350860724036988348, guid: 986d0c8054a304ce998bbfc381bfc24c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
