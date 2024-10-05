@@ -150,7 +150,7 @@ public class SpawnLilyPads : MonoBehaviour
 
                     Lily = lily.GetComponent<lily>();
 
-                    bool isEvil = Random.Range(0, 10) < 7;
+                    bool isEvil = Random.Range(0, 10) < 5;
 
                     Lily.SetIsEvil(isEvil);
                 }
@@ -265,7 +265,7 @@ public class SpawnLilyPads : MonoBehaviour
 
                     Lily = lily.GetComponent<lily>();
 
-                    bool isEvil = Random.Range(0, 10) < 2;
+                    bool isEvil = Random.Range(0, 10) < 1;
 
                     Lily.SetIsEvil(isEvil);
 

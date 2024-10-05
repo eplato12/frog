@@ -34,9 +34,9 @@ public class lily : MonoBehaviour
         UpdateSprite();
     }
 
-    public void increaseBy(float x)
+    public void increaseSpeedBy(float speedMultiple)
     {
-        rotationSpeed *= x;
+        rotationSpeed *= speedMultiple;
     }
 
     void UpdateSprite()
@@ -66,7 +66,7 @@ public class lily : MonoBehaviour
 
         if (other.CompareTag("Player") && isEvil)
         {
-            StartCoroutine(IncreaseRotationSpeedForSeconds(10f));
+            StartCoroutine(IncreaseRotationSpeedForSeconds(5f));
         }
     }
 
@@ -74,7 +74,7 @@ public class lily : MonoBehaviour
     {
         float targetSpeed = rotationSpeed;
         float currentSpeed=rotationSpeed * speedMultiplier;
-        float lerpTime=5;
+        float lerpTime=7;
         float elapsedTime=0;
 
         while (elapsedTime < lerpTime)
