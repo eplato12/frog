@@ -75,6 +75,7 @@ public class FrogScript : MonoBehaviour
             else
             {
                 IsLily(transform.position);
+                IsStar();
             }
         } 
 
@@ -125,7 +126,7 @@ public class FrogScript : MonoBehaviour
         yield return new WaitForSeconds(frogAnimator.GetCurrentAnimatorStateInfo(0).length);
         frogAnimator.SetBool("isJumping", false);  
     }
-
+    
     private string GetNextScene(string currentScene)
     {
         switch (currentScene)
@@ -153,11 +154,6 @@ public class FrogScript : MonoBehaviour
                 isOnLily = true;
                 break;
             }
-            if (collider.CompareTag("star"))
-            {
-                collider.gameObject.SetActive(false);
-                starCounter++;
-            }
             else if (collider.CompareTag("evilLily"))
             {
                 transform.parent = collider.gameObject.transform;
@@ -181,6 +177,23 @@ public class FrogScript : MonoBehaviour
         if (lilly != null)
         {
             lilly.speedIncrease(newSpeed);
+        }
+    }
+
+    private void IsStar()
+    {
+        if (transform.parent.childCount > 1)
+        {
+            //GameObject[] lilyChildren = new GameObject[transform.parent.transform.childCount];
+            for (int i = 0; i < transform.parent.transform.childCount; i++)
+            {
+                GameObject lilyChild = transform.parent.transform.GetChild(i).gameObject;
+                if (lilyChild.CompareTag("star"))
+                {
+                    Destroy(lilyChild);
+                    starCounter++;
+                }
+            }
         }
     }
 
