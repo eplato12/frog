@@ -17,13 +17,13 @@ public class LoadingDots : MonoBehaviour
     {
         while (true) 
         {
-            textMeshPro.text = "Loading Next Level.";
+            textMeshPro.text = "Loading.";
             yield return new WaitForSeconds(dotAnimationDelay);
 
-            textMeshPro.text = "Loading Next Level..";
+            textMeshPro.text = "Loading..";
             yield return new WaitForSeconds(dotAnimationDelay);
 
-            textMeshPro.text = "Loading Next Level...";
+            textMeshPro.text = "Loading...";
             yield return new WaitForSeconds(dotAnimationDelay);
         }
     }
