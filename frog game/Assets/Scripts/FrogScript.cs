@@ -211,23 +211,6 @@ public class FrogScript : MonoBehaviour
         }
     }
 
-    private void IsStar()
-    {
-        if (transform.parent.childCount > 1)
-        {
-            
-            for (int i = 0; i < transform.parent.transform.childCount; i++)
-            {
-                GameObject lilyChild = transform.parent.transform.GetChild(i).gameObject;
-                if (lilyChild.CompareTag("star"))
-                {
-                    Destroy(lilyChild);
-                    starCounter++;
-                }
-            }
-        }
-    }
-
 
 }
 
