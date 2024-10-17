@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3809526150869351269}
   - component: {fileID: 9212491431035642050}
   m_Layer: 0
-  m_Name: frog legs
+  m_Name: Frog Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
